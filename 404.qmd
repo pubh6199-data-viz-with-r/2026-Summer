@@ -9,6 +9,6 @@ execute:
 
 We can't find the page you were looking for.
 
-Use the navigation bar above to return to the main site, or [go to the homepage](https://github.com/pubh6199-data-viz-with-r/2025-Summer).
+Use the navigation bar above to return to the main site, or [go to the homepage](https://github.com/pubh6199-data-viz-with-r/2026-Summer).
 
 If you believe this is a broken link from the course site, please report it to [Dr. Xindi Hu](mailto:xindi.hu@gwu.edu).

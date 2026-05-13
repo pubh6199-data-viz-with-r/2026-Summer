@@ -21,9 +21,9 @@ project:
 website:
   title: "PUBH 6199: Visualizing Data with R"
   image: images/logo.png
-  site-url: https://pubh6199-data-viz-with-r.github.io/2025-Summer
+  site-url: https://pubh6199-data-viz-with-r.github.io/2026-Summer
   favicon: images/favicon.ico
-  repo-url: https://github.com/pubh6199-data-viz-with-r/2025-Summer
+  repo-url: https://github.com/pubh6199-data-viz-with-r/2026-Summer
   repo-actions: [edit, issue]
   description: 'Course website for PUBH 6199: Visualizing Data with R at George Washington University, offered in Summer 2026.'
   search: true
@@ -62,7 +62,7 @@ website:
         href: https://pubh6199-data-viz-with-r.github.io/showcase.html
       - text: Slack
         icon: slack
-        href: https://pubh6199datav-7n52652.slack.com
+        href: https://su26pubh6199d-nfs9898.slack.com
       - text: "Schedule a call w/Prof. Hu"
         icon: clock-fill
         href: https://calendly.com/xindi-hu/pubh6199-office-hour
@@ -80,7 +80,7 @@ website:
             href: mailto:xindi.hu@gwu.edu
           - text: Source files
             icon: github
-            href: https://github.com/pubh6199-data-viz-with-r/2025-Summer
+            href: https://github.com/pubh6199-data-viz-with-r/2026-Summer
   page-footer:
     left: "© 2026 Dr. Xindi Hu"
     center:
