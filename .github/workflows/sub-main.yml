@@ -1,0 +1,108 @@
+name: Render and Deploy Quarto Site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Scheduled to run at midnight EST (5:00 UTC) every Sunday
+    - cron: '0 5 * * 0'
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_VERSION: '4.4.2'
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ env.R_VERSION }}
+          use-public-rspm: true  # Use RStudio Package Manager for faster CRAN installs
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcurl4-openssl-dev \
+            libharfbuzz-dev \
+            libfribidi-dev \
+            libfreetype6-dev \
+            libpng-dev \
+            libtiff5-dev \
+            libjpeg-dev
+
+      - name: Setup CRAN R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages:
+            any::cowplot
+            any::here
+            any::htmltools
+            any::kableExtra
+            any::knitr
+            any::lubridate
+            any::tidyverse
+            any::rmarkdown
+            any::ggplot2
+            any::ggthemes
+            any::GGally
+            any::gghighlight
+            any::see
+            any::leaflet
+            any::leaflet.extras
+            any::shiny
+            any::countdown
+            any::fontawesome
+            any::ggrepel
+            any::janitor
+            any::metathis
+            any::readxl
+            any::remotes
+            any::gsheet
+            any::quarto
+            any::rvest
+            any::viridis
+            any::nycflights13
+            any::gapminder
+            any::palmerpenguins
+            any::fmsb
+            any::ggalluvial
+            any::showtext
+            any::ggmap
+            any::tmap
+            any::tigris
+            any::tidycensus
+            any::spData
+            any::RColorBrewer
+            any::maps
+            any::sf
+            
+
+      - name: Install GitHub-only packages
+        run: |
+          remotes::install_github("jhelvy/renderthis")
+          remotes::install_github("gadenbuie/xaringanExtra")
+          remotes::install_github("ricardo-bion/ggradar")
+        shell: Rscript {0}
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto site
+        run: quarto render
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site
+          publish_branch: gh-pages
+          force_orphan: true

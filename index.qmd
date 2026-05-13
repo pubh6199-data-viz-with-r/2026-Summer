@@ -1,0 +1,32 @@
+# PUBH 6199: Visualizing Data with R (Summer 2025)
+
+::: {.grid}
+
+::: {.g-col-9}
+
+**Department**: [Environmental and Occupational Health](https://publichealth.gwu.edu/departments/environmental-and-occupational-health) @ [GWU](https://www.gwu.edu/)
+
+**Credits**: 2
+
+**Description**:
+
+```{r child = here::here("fragments", "description.qmd")}
+```
+
+**Learning Objectives**:
+
+```{r child = here::here("fragments", "learning-objectives.qmd")}
+```
+
+**Prerequisites**:
+
+```{r child = here::here("fragments", "prerequisites.qmd")}
+```
+
+:::
+::: {.g-col-3}
+
+<img src="images/logo.png" width="200">
+
+:::
+:::

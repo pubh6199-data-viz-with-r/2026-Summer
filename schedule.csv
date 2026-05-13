@@ -1,0 +1,13 @@
+week,date,theme,n_class,stub_class,name_class,description_class,n_assign,name_assign,stub_assign,due_assign,n_lab,stub_lab,due_lab
+1,5/20/25,Cleaning,1,course-introduction,Course Introduction,course objectives; evaluation criteria; ggplot2,1,,hw1,5/26/25,,,
+1,5/22/25,Cleaning,2,data-wrangling,Data Wrangling,code version control; clean data; tidyverse,,,,,1,lab1,5/26/25
+2,5/27/25,Desining,3,visual-vocabulary,Visual Vocabulary,graphical integrity; choose chart type; design considerations,2,,hw2,6/2/25,,,
+2,5/29/25,Designing,4,fundamental-chart,Fundamental Chart Types,basic chart; trend over time; distribution; relationships,,,,,2,lab2,6/2/25
+3,6/3/25,Real-world,5,case-study,Case Study,practical real world applications,3,Project brainstorm,hw3,6/9/25,,,
+3,6/5/25,Designing,6,specialized-chart,Specialized Chart Types,"faceted plot; sankey diagram, parallel coordinates, dos and donts",,,,,3,lab3,6/9/25
+4,6/10/25,Interactive,7,r-shiny,Introdcution to R Shiny,R shiny; interactive data visualization,4,,hw4,6/16/25,,,
+4,6/12/25,Project,8,final-project-plan,Final Project - Plan,public data repository; form teams; sketch,,Project prototype,,,4,lab4,6/16/25
+5,6/17/25,Designing,9,maps,Maps,choropleth map; point map; heat map; design decisions,5,,hw5,6/23/25,,,
+5,6/19/25 [No Class],Real-world,10,recreate-viz,Recreate Visualization from Public Source,research reproducibility; tidycensus,,,,,5,lab5,6/23/25
+6,6/24/25,Project,11,final-project-prototype,Final Project - Prototype,1-on-1 feedback; progress update,,,,,,,
+6,6/26/25,Project,12,final-project-present,Final Project - Present,final project presentation; peer feedback,6,Final project,final project,6/26/25,,,

@@ -1,0 +1,100 @@
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 5896
+    browser: true
+  render:
+    - "*.qmd"
+    - "!fragments/"
+    - "!1-getting-started/"
+  resources:
+    - "class/"
+    - "hw/"
+    - "rubrics/"
+    - "data/"
+    - "content/"
+    - "mini/"
+    - "project/"
+    - "templates/"
+
+website:
+  title: "PUBH 6199: Visualizing Data with R"
+  image: images/logo.png
+  site-url: https://pubh6199-data-viz-with-r.github.io/2025-Summer
+  favicon: images/favicon.ico
+  repo-url: https://github.com/pubh6199-data-viz-with-r/2025-Summer
+  repo-actions: [edit, issue]
+  description: 'Course website for PUBH 6199: Visualizing Data with R at George Washington University, offered in Summer 2025.'
+  search: true
+  open-graph:
+    locale: es_ES
+    site-name: https://pubh6199-data-viz-with-r.github.io/
+  sidebar:
+    style: "docked"
+    background: "primary"
+    collapse-level: 1
+    search: true
+    contents:
+      - text: Home
+        icon: house-door-fill
+        href: index.qmd
+      - text: Syllabus
+        icon: map-fill
+        href: syllabus.qmd
+      - text: Schedule
+        icon: table
+        href: schedule.qmd
+      - text: Software
+        icon: download
+        href: software.qmd
+      - text: FAQ
+        icon: question-square-fill
+        href: faq.qmd
+    #  - text: Finding Data
+    #    icon: database-fill
+    #    href: finding-data.qmd
+    #  - text: References
+    #    icon: bookmark-fill
+    #    href: references.qmd
+    #  - text: Project Showcase
+    #    icon: bar-chart-line-fill
+    #    href: https://pubh6199-data-viz-with-r.github.io/showcase.html#summer-2025
+      - text: Slack
+        icon: slack
+        href: https://pubh6199datav-7n52652.slack.com
+      - text: "Schedule a call w/Prof. Hu"
+        icon: clock-fill
+        href: https://calendly.com/xindi-hu/pubh6199-office-hour
+      - section: Other
+        icon: question-circle-fill
+        contents:
+          - text: About
+            icon: question-circle-fill
+            href: about.qmd
+          - text: License
+            icon: award-fill
+            href: LICENSE.qmd
+          - text: Contact
+            icon: envelope-fill
+            href: mailto:xindi.hu@gwu.edu
+          - text: Source files
+            icon: github
+            href: https://github.com/pubh6199-data-viz-with-r/2025-Summer
+  page-footer:
+    left: "© 2025 Dr. Xindi Hu"
+    center:
+      - text: "<a href='https://pubh6199-data-viz-with-r.github.io/LICENSE.html'>LICENSE: CC-BY-SA <i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i><i class='fab fa-creative-commons-sa'></i></a>"
+    right: "GWU Milken Institute SPH"
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: false
+    # This is to include fontawesome icons
+    include-in-header: "_includes/header.html"
+filters:
+    - schedule.lua

@@ -1,0 +1,8 @@
+---
+title: "Frequenly Asked Questions"
+toc: true
+toc-title: FAQ
+toc-location: right
+---
+
+# To be added after class starts!

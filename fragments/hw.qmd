@@ -1,0 +1,22 @@
+```{r}
+#| include: false
+
+source(here::here("_common.R"))
+
+due <- get_schedule() %>%
+  filter(n_assign == params$number) %>%
+  pull(due_assign) %>%
+  paste0(" by 11:59pm")
+
+hw_file <- paste0('hw', params$number, '.qmd')
+```
+
+> **Due**: `r due`
+>
+> **Weight**: This assignment is worth 1% of your final grade.
+>
+> **Purpose**: `r params$purpose`
+>
+> **Rubrics**: This assignment is graded using the following rubrics:
+>
+

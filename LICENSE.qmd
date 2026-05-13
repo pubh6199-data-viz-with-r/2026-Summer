@@ -1,0 +1,23 @@
+---
+title: "Licensing and copyright information"
+---
+
+The course material is licensed under the
+[Creative Commons ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/). 
+
+In developing this course, I draw contents from the following courses, workshops, and talks:
+
+### Courses / workshops
+
+Name | Author(s) | Links
+--------- | --------- | ---
+CS 171 | Harvard University | [course](https://www.cs171.org/2024/)
+EDS 240 | University of California Santa Barbara | [course](https://eds-240-data-viz.github.io/)
+EMSE 4572| George Washington University | [course](https://eda.seas.gwu.edu/), [github](http://github.com/emse-eda-gwu/)
+How Humans See Data  | John Rauser | [youtube](https://youtu.be/fSgEeI2Xpdc?si=lSOsPkfNnoo8yHyW)
+
+### Books
+
+Name | Author(s) | Links
+--------- | --------- | ---
+R for Data Science | Garrett Grolemund & Hadley Wickham | [online book](https://r4ds.had.co.nz/); [GitHub](https://github.com/hadley/r4ds); [purchase](https://www.amazon.com/Data-Science-Transform-Visualize-Model/dp/1491910399)

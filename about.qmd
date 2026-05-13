@@ -1,0 +1,10 @@
+---
+title: "About"
+---
+
+```{r child = here::here("fragments", "description.qmd")}
+```
+
+This course was inspired by many other courses / resources that cover similar material - a full list of sources can be found in the [LICENSE](LICENSE.html) page.
+
+This course was originally created by Dr. Xindi (Cindy) Hu at the George Washington University for the Summer 2025 semester.

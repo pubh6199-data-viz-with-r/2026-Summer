@@ -1,0 +1,7 @@
+Upon completion of the course, students will be able to:
+
+- Identify the effective types of data visualization for the data at hand and the intended audience
+- Critique data visualizations and provide constructive feedback
+- Prepare dataset for developing data visualization
+- Create effective, ethical, and aesthetically-pleasing visualizations using R programming language
+- Collaborate with classmates from diverse disciplinary background to carry out a visualization project
