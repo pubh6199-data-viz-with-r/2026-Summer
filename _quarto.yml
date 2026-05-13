@@ -25,7 +25,7 @@ website:
   favicon: images/favicon.ico
   repo-url: https://github.com/pubh6199-data-viz-with-r/2025-Summer
   repo-actions: [edit, issue]
-  description: 'Course website for PUBH 6199: Visualizing Data with R at George Washington University, offered in Summer 2025.'
+  description: 'Course website for PUBH 6199: Visualizing Data with R at George Washington University, offered in Summer 2026.'
   search: true
   open-graph:
     locale: es_ES
@@ -57,9 +57,9 @@ website:
     #  - text: References
     #    icon: bookmark-fill
     #    href: references.qmd
-    #  - text: Project Showcase
-    #    icon: bar-chart-line-fill
-    #    href: https://pubh6199-data-viz-with-r.github.io/showcase.html#summer-2025
+      - text: Project Showcase
+        icon: bar-chart-line-fill
+        href: https://pubh6199-data-viz-with-r.github.io/showcase.html
       - text: Slack
         icon: slack
         href: https://pubh6199datav-7n52652.slack.com
@@ -82,7 +82,7 @@ website:
             icon: github
             href: https://github.com/pubh6199-data-viz-with-r/2025-Summer
   page-footer:
-    left: "© 2025 Dr. Xindi Hu"
+    left: "© 2026 Dr. Xindi Hu"
     center:
       - text: "<a href='https://pubh6199-data-viz-with-r.github.io/LICENSE.html'>LICENSE: CC-BY-SA <i class='fab fa-creative-commons'></i><i class='fab fa-creative-commons-by'></i><i class='fab fa-creative-commons-sa'></i></a>"
     right: "GWU Milken Institute SPH"

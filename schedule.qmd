@@ -31,7 +31,7 @@ done <- schedule %>%
 
 # Add highlighting based on current week if we're still in the semester
 highlight <- which(Sys.Date() > (schedule$Date_md))
-if (Sys.Date() <= lubridate::ymd("2025-06-27")) {
+if (Sys.Date() <= lubridate::ymd("2026-06-30")) {
      done <- done %>%
      row_spec(highlight, background = "#C6C6C6")
 }

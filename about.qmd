@@ -7,4 +7,4 @@ title: "About"
 
 This course was inspired by many other courses / resources that cover similar material - a full list of sources can be found in the [LICENSE](LICENSE.html) page.
 
-This course was originally created by Dr. Xindi (Cindy) Hu at the George Washington University for the Summer 2025 semester.
+This course was originally created by Dr. Xindi (Cindy) Hu at the George Washington University. The first time this course was offered was in Summer 2025.
