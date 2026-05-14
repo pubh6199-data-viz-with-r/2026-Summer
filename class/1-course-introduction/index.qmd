@@ -1,7 +1,7 @@
 ---
 title: "1. Course Introduction"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: May 20, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: May 19, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -45,37 +45,21 @@ ScD in Environmental Health, Harvard University
 
 Environmental Data Science, Drinking Water Quality, Health Equity, Climate Change, Geospatial Analysis, Machine Learning
 
-## Meet your TAs {.smaller}
+## Meet your LA {.smaller}
 
-:::{.column width="50%"}
 
-![](images/silas-headshot.jpg){style="border-radius: 70%; width: 70%; display: block; margin: auto;"}
-
-::: citation
-Silas Horn
-
-MPH Candidate
-
-Environmental Health Science and Policy
-
-GW SPH
-:::
-:::
-
-:::{.column width="50%"}
-
-![](images/sayam-headshot.png){style="border-radius: 70%; width: 70%; display: block; margin: auto;"}
+![](images/bogdan-headshot.jpeg){style="border-radius: 70%; width: 70%; display: block; margin: auto;"}
 
 ::: citation
-Sayam Palrecha
+Bogdan Bunea
 
-MS Candidate
+BEng Candidate
 
-Data Science
+Systems Engineering
 
-GW CCAS
+GW SEAS
 :::
-:::
+
 
 ## About you {.center .middle}
 
@@ -126,8 +110,8 @@ GW CCAS
 ## Grading
 
 -   **Class Participation** (attendance, contribution to in-class activities, completion of end-of-class surveys): 10%
--   **Homework** (5 weekly assignments): 35%
--   **Lab** (5 weekly lab notebooks): 15%
+-   **Homework** (4 weekly assignments): 35%
+-   **Lab** (4 weekly lab notebooks): 15%
 -   **Final Project** (team of 2): 40%
     -   25% for the final data visualization product
     -   10% for the presentation
@@ -151,13 +135,38 @@ GW CCAS
 -   Bring laptop to lecture, lab, and office hour
 -   Please only use it for in-class activities! <image src="images/device-policy.jpeg" alt="Device policy" style="width: 100%; height: auto;"/>
 
-## Generative AI policy {.fit-text .smaller}
+## Before we talk about genAI policy {.fit-text .smaller}
+::: {.column width="60%"}
 
+[Source: Anthropic](https://www.anthropic.com/research/AI-assistance-coding-skills)
+
+![](images/claude-study.png){style="display: block; margin: auto;"}
+:::
+
+:::{.column width = "40%"}
+A randomized controlled trial.
+
+- Using AI assistance led to a statistically significant decrease in mastery (17% lower) 
+
+- Using AI sped up the task slightly, but not statistically significant.
+
+- How someone used AI influenced how much information they retained.
+
+:::
+## GenAI policy {.fit-text .smaller}
+
+:::{.column width = "50%"}
 ::: incremental
 -   Generative AI is another tool in your toolbox, use it but be prepared to be responsible.
 -   Usage of GenAI tools is permitted but please be transparent about it.
 -   Lazy usage of GenAI tools (homework prompt -\> output -\> submission) is **prohibited**.
 -   Include a "How I used GenAI" section in your homework and final project (include prompt, date, model version, and link to chat history).
+-   Use **Study Mode ChatGPT**, **Claude Learning Mode**, or **LearnLM in Gemini**
+:::
+:::
+
+:::{.column width = "50%"}
+![](images/active-learning-techniques.png){style="display: block; margin: auto;"}
 :::
 
 ## Communication {.fit-text .smaller}
