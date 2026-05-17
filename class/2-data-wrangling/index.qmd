@@ -1,7 +1,7 @@
 ---
 title: "Lab 1. Data Wrangling"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: May 22, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: May 21, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -106,7 +106,7 @@ countdown::countdown(
 
 - Accept the invitation to join the GitHub Classroom, check your email
 - Accept the assignment titled lab 1, check your email or use this link **https://classroom.github.com/a/XXXX**
-- Navigate to GitHub, under the [class organization](https://github.com/orgs/pubh6199-data-viz-with-r/repositories), you should see a repository named `lab1-<your-github-username>`.
+- Navigate to GitHub, under the [class organization](https://github.com/orgs/pubh6199-data-viz-with-r/repositories), you should see a repository named `2026-lab1-<your-github-username>`.
 
 ## Clone the repository with RStudio {style="font-size: 80%"}
 
