@@ -175,7 +175,7 @@ A randomized controlled trial.
 -   Course website: [https://pubh6199-data-viz-with-r.github.io/2026-Summer/](https://pubh6199-data-viz-with-r.github.io/2026-Summer/)
 -   Blackboard
 -   Office hours:
-    -   Bogdan: TBD
+    -   Bogdan: Fridays 1-2pm
     -   Cindy: By appointment
 -   Boundaries:
     -   Please allow 24 hrs for slack/email response
@@ -358,33 +358,6 @@ Source: [Jonathan Schwabish](https://policyviz.com/2022/02/01/the-data-visualiza
 - <span style="font-weight: bold; color: orange">Why?</span>
 - Introduction to {ggplot2}
 
-## {background-image="images/in-class-activity.png"}
-
-::: {.v-center-container style="text-align: center;"}
-<br>
-<br>
-<br>
-In-Class Activity:
-
-In small group of 2, discuss your favorite example of data visualization, why do you like it? what functionality does that data visualization serve?
-:::
-
-```{r}
-countdown::countdown(
-  minutes = 5,
-  bottom = 0,
-  # Fanfare when it's over
-  play_sound = TRUE,
-  color_border              = "#FFFFFF",
-  color_text                = "#7aa81e",
-  color_running_background  = "#7aa81e",
-  color_running_text        = "#FFFFFF",
-  color_finished_background = "#ffa07a",
-  color_finished_text       = "#FFFFFF",
-  font_size = "2em",
-  )
-```
-
 ## Why do we visualize data?
 
 To reveal patterns that are hard to see in raw numbers...
@@ -495,6 +468,33 @@ ggplot(diamonds, aes(x = price, y = after_stat(density))) +
 ::: {style="text-align: right; font-size: 70%;"}
 Source: Ed Hawkins, [Climate Stripes](https://showyourstripes.info/)
 :::
+
+## {background-image="images/in-class-activity.png"}
+
+::: {.v-center-container style="text-align: center;"}
+<br>
+<br>
+<br>
+In-Class Activity:
+
+In small group of 2, discuss your favorite example of data visualization, why do you like it? what functionality does that data visualization serve?
+:::
+
+```{r}
+countdown::countdown(
+  minutes = 5,
+  bottom = 0,
+  # Fanfare when it's over
+  play_sound = TRUE,
+  color_border              = "#FFFFFF",
+  color_text                = "#7aa81e",
+  color_running_background  = "#7aa81e",
+  color_running_text        = "#FFFFFF",
+  color_finished_background = "#ffa07a",
+  color_finished_text       = "#FFFFFF",
+  font_size = "2em",
+  )
+```
 
 ## Why R? {.smaller}
 
