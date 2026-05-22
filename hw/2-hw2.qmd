@@ -1,7 +1,7 @@
 ---
 title: "Homework 2"
 author: "Your Name"
-date: "2025-XX-XX"
+date: "2026-XX-XX"
 params:
   number: 2
   purpose: "The purpose of this assignment is to practice the visual channels and design principles we covered in class and let you get hands-on experience of working with real-world data."

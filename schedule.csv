@@ -7,7 +7,7 @@ week,date,theme,n_class,stub_class,name_class,description_class,n_assign,name_as
 3,6/4/26,Designing,6,specialized-chart,Specialized Chart Types,"faceted plot; sankey diagram, parallel coordinates, dos and donts",,,,,3,lab3,6/8/26
 4,6/9/26,Interactive,7,r-shiny,Introdcution to R Shiny,R shiny; interactive data visualization,4,,hw4,6/15/26,,,
 4,6/11/26,Project,8,final-project-plan,Final Project - Plan,public data repository; form teams; sketch,,Project plan,,,4,lab4,6/15/26
-3,6/16/26,Real-world,9,case-study,Case Study,practical real world applications,,,,,,,
+5,6/16/26,Real-world,9,case-study,Case Study,practical real world applications,,,,,,,
 5,6/18/26,Real-world,10,recreate-viz,Recreate Visualization from Public Source,research reproducibility; tidycensus,,,,,,,
-6,6/23/26,Project,11,final-project-prototype,Final Project - Prototype,1-on-1 feedback; progress update,5,Project prototype,hw5,6/23/26,,,
-6,6/25/26,Project,12,final-project-present,Final Project - Present,final project presentation; peer feedback,6,Final project,hw6,6/25/26,,,
+6,6/23/26,Project,11,final-project-prototype,Final Project - Prototype,1-on-1 feedback; progress update,,,,,,,
+6,6/25/26,Project,12,final-project-present,Final Project - Present,final project presentation; peer feedback,5,Final project,final,6/25/26,,,

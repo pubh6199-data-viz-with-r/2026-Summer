@@ -1,9 +1,9 @@
 ---
 title: "Homework 4"
 author: "Your Name"
-date: "2025-XX-XX"
+date: "2026-XX-XX"
 params:
-  number: 3
+  number: 4
   purpose: "This assignment gives you hands-on practice with building Shiny apps. You'll learn how to connect inputs and outputs, create interactive plots and tables, and experiment with Shiny Assistant and other GenAI tools to build dashboards."
 format: 
   html:
