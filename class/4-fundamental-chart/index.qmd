@@ -1,7 +1,7 @@
 ---
 title: "Lab 2. Fundamental Chart Types"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: May 29, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: May 28, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
