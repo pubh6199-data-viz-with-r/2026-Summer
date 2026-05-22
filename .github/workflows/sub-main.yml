@@ -93,7 +93,7 @@ jobs:
           remotes::install_github("ricardo-bion/ggradar")
         shell: Rscript {0}
 
-        - name: Render and Publish
+      - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
