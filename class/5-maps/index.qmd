@@ -649,6 +649,7 @@ glimpse(counties_md)
 ```{r}
 #| echo: true
 library(tidycensus)
+# add census api key
 invisible(
   census_api_key(Sys.getenv("CENSUS_API_KEY"), install = TRUE, overwrite = TRUE)
 )
