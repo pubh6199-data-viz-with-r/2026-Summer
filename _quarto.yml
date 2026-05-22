@@ -98,3 +98,5 @@ format:
     include-in-header: "_includes/header.html"
 filters:
     - schedule.lua
+execute:
+  freeze: auto

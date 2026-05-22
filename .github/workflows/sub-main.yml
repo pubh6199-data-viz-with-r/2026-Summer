@@ -93,12 +93,17 @@ jobs:
           remotes::install_github("ricardo-bion/ggradar")
         shell: Rscript {0}
 
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
+        - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+          
       - name: Render Quarto site
         run: quarto render
-
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
