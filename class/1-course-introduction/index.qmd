@@ -53,9 +53,7 @@ Environmental Data Science, Drinking Water Quality, Health Equity, Climate Chang
 ::: citation
 Bogdan Bunea
 
-BEng Candidate
-
-Systems Engineering
+BS'26 Systems Engineering
 
 GW SEAS
 :::
@@ -161,7 +159,7 @@ A randomized controlled trial.
 -   Usage of GenAI tools is permitted but please be transparent about it.
 -   Lazy usage of GenAI tools (homework prompt -\> output -\> submission) is **prohibited**.
 -   Include a "How I used GenAI" section in your homework and final project (include prompt, date, model version, and link to chat history).
--   Use **Study Mode ChatGPT**, **Claude Learning Mode**, or **LearnLM in Gemini**
+-   Use **Study Mode ChatGPT**, **Claude Learning Mode**, or [**LearnLM in Gemini**](https://blog.google/products-and-platforms/products/education/guided-learning/)
 :::
 :::
 
