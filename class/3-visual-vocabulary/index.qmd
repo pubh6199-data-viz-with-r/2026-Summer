@@ -1,7 +1,7 @@
 ---
 title: "Lecture 2. Visual Vocabulary & Effective Visualizations"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: May 27, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: May 26, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -1413,6 +1413,33 @@ Tufte, E. R. (1983). *The Visual Display of Quantitative Information*. Cheshire,
 -   efficient in interpretation
 -   often narrative in content, showing shifts in the relationship between variables as the index variable changes (thereby revealing interaction or multiplicative effects)
 :::
+
+##  {background-image="images/in-class-activity.png"}
+
+:::: {style="text-align: center;"}
+<br> <br> In-Class Activity:
+
+Bad graph detector
+
+Please search the internet for bad visualizations, and discuss in a small group which design principles are violated.
+
+::::
+
+```{r}
+countdown::countdown(
+  minutes = 5,
+  bottom = 0,
+  # Fanfare when it's over
+  play_sound = TRUE,
+  color_border              = "#FFFFFF",
+  color_text                = "#7aa81e",
+  color_running_background  = "#7aa81e",
+  color_running_text        = "#FFFFFF",
+  color_finished_background = "#ffa07a",
+  color_finished_text       = "#FFFFFF",
+  font_size = "2em",
+  )
+```
 
 ## Outline for today
 
