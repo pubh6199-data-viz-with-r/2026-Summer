@@ -57,6 +57,18 @@ website:
     #  - text: References
     #    icon: bookmark-fill
     #    href: references.qmd
+      - section: "Final Project"
+        icon: folder-fill
+        contents:
+          - text: Overview
+            icon: info-circle-fill
+            href: project/0-overview.qmd
+          - text: Final Report
+            icon: file-earmark-text-fill
+            href: project/1-final-report.qmd
+          - text: Presentation
+            icon: easel-fill
+            href: project/2-presentation.qmd
       - text: Project Showcase
         icon: bar-chart-line-fill
         href: https://pubh6199-data-viz-with-r.github.io/showcase.html

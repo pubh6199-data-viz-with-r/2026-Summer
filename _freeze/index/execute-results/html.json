@@ -1,0 +1,15 @@
+{
+  "hash": "f914f840f58e3e09594d10a5cab6ec8e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# PUBH 6199: Visualizing Data with R (Summer 2026)\n\n::: {.grid}\n\n::: {.g-col-9}\n\n**Department**: [Environmental and Occupational Health](https://publichealth.gwu.edu/departments/environmental-and-occupational-health) @ [GWU](https://www.gwu.edu/)\n\n**Credits**: 2\n\n**Description**:\n\n\nThis course will equip students with the skills and knowledge to create impactful and responsible data visualizations using the R programming language. At the end of this class, students will gain proficiency in both fundamental (e.g. bar chart, bubble chart, choropleth maps) as well as advanced graph types (e.g. Sankey diagram, heatmap, parallel coordinates plot, faceted graphs) and know how to create them using R.\n\n**Learning Objectives**:\n\n\nUpon completion of the course, students will be able to:\n\n- Identify the effective types of data visualization for the data at hand and the intended audience\n- Critique data visualizations and provide constructive feedback\n- Prepare dataset for developing data visualization\n- Create effective, ethical, and aesthetically-pleasing visualizations using R programming language\n- Collaborate with classmates from diverse disciplinary background to carry out a visualization project\n\n**Prerequisites**:\n\n\nThis course is designed for students with proficiency in using the R programming language and working in the RStudio integrated development environment. Students can fulfill this prerequisite by having successfully completed courses such as PUBH 6131, 6144, 6282, 6851, 6854 or 6867. If you are unsure, contact the instructor to discuss your eligibility.\n\n:::\n::: {.g-col-3}\n\n<img src=\"images/logo.png\" width=\"200\">\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

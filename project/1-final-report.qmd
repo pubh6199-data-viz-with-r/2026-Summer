@@ -1,0 +1,100 @@
+---
+title: "Final Report"
+toc: true
+toc-location: right
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+source(here::here("_common.R"))
+
+rubric <- read_csv(here::here('rubrics', '3-final-report.csv'))
+maxPoints <- rubric |>
+  filter(rating == "Excellent") |>
+  summarise(max = sum(maxPoints)) |>
+  pull(max)
+```
+
+> **Due**: June 25 by 11:59pm
+>
+> **Weight**: The final report is part of the 40% final project grade.
+>
+> **Purpose**: Communicate your data visualization project as a complete, reproducible analysis that tells a clear story using at least three visualizations.
+>
+> **Assessment**: Your submission will be assessed using the [rubric](#grading-rubric) at the bottom of this page.
+
+## Instructions
+
+Use the [project template](../hw/5-final.html) as the starting point for your report. Your final report must be rendered as a self-contained HTML file.
+
+### Required Sections
+
+Your report should include all of the following:
+
+**1. Introduction**
+
+Briefly introduce your topic and state your research question(s). Motivate why this topic is interesting and important. Describe the format option you chose (same question / different audiences; same data / different questions; interactive dashboard) and explain why it fits your project.
+
+**2. Data**
+
+Describe your data source(s):
+
+- Where did the data come from? Include a URL or citation.
+- What are the key variables?
+- What pre-processing steps did you take (cleaning, filtering, joining)?
+
+**3. Visualizations**
+
+Include **at least three visualizations** that work together to address your research question. For each visualization:
+
+- Give it a descriptive title
+- Describe what the chart shows and why you chose this chart type
+- Explain how it connects to your research question and the other charts in your project
+
+If you chose the interactive dashboard option, embed your app (via `<iframe>` or a link) and describe the three visual components.
+
+**4. Interpretation**
+
+Summarize your key findings. What insights do your visualizations reveal? What patterns, trends, or comparisons stand out?
+
+**5. Limitations**
+
+Discuss any limitations of your data or your visualizations. What can't you conclude? What would you do differently with more time or data?
+
+**6. Conclusion**
+
+Provide a takeaway message. What should a reader remember after viewing your project?
+
+**7. References**
+
+Cite your data sources, R packages used, and any visualizations or publications that inspired your work.
+
+### Formatting Requirements
+
+- Use the YAML header from the [project template](../hw/5-final.html); update title, author, and date.
+- Set `self-contained: true` so the HTML file includes all images and styles.
+- Set `code-fold: true` so code is accessible but not distracting.
+- All figures must have descriptive alt text or captions.
+- File naming: `5-final.html` and `5-final.qmd`.
+
+## Submission
+
+Submit your project as a link to your rendered HTML report. Your GitHub repository should include:
+
+- `5-final.qmd` — your source file
+- `5-final.html` — your rendered report
+- `data/` — your data files (if small enough to include in the repo)
+
+Submit assignment in GitHub Classroom by **June 25 at 11:59pm**.
+
+## Grading Rubric {#grading-rubric}
+
+Your final report is worth **`r maxPoints` points**, assessed on the following criteria:
+
+```{r}
+make_rubric(rubric)
+```
