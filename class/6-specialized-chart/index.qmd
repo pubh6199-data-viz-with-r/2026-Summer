@@ -1,7 +1,7 @@
 ---
 title: "Lab 3. Specialized Chart Types"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: June 5, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 4, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -20,16 +20,6 @@ resources:
 ```{r setup}
 library(tidyverse)
 ```
-
-## Feedback from grading HW1 & Lab 1 {.smaller}
-
-- Empty html 
-
-- Missing the answer fields, included as plain text 
-
-- GenAI usage, even if you did not use it, you need to answer that section 
-
-- Log transform right skewed variables to show patterns better 
 
 ## Outline for today {.smaller}
 
@@ -848,11 +838,6 @@ Group-level parallel coordinates plot:
 
 . . .
 
-::: takeaway
-*Discussion:*
-
-When is it better to use individual-level data vs. group-level profiles in a parallel coordinate plot?
-:::
 
 ##  {background="#033C5A"}
 <br>
