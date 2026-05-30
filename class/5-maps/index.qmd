@@ -1,7 +1,7 @@
 ---
-title: "Lecture 5. Maps"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: June 17, 2025
+title: "Lecture 3. Maps"
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 2, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -16,6 +16,30 @@ format:
 resources:
   - images/
 ---
+
+## Time to start thinking about your final project {.smaller-title}
+![](images/finals-are-coming.png)
+
+
+## Time to start thinking about your final project {.smaller-title}
+![](images/already.gif)
+
+
+
+## Time to start thinking about your final project {.smaller-title}
+
+::: {style="text-align: center;"}
+
+Be prepared to share your project idea via a 2-min pitch in lab 4 next week (June 11th).
+
+- Project idea
+- Research questions
+- Potential data sources
+- Format preference and anticipated visualizations
+
+See [course website](https://pubh6199-data-viz-with-r.github.io/2026-Summer/project/0-overview.html) for project details and deadlines.
+
+:::
 
 ## Outline for today {.smaller}
 
@@ -663,7 +687,8 @@ income_md <- get_acs(geography = "county",
 
 ::: takeaway
 
-Lab 5 has a tutorial on how to get started with `{tidycensus}` packages. Follow it carefully. Remember to add your `.Renviron` to `.gitignore` so that you do not share your API keys. 
+Follow [this tutorial](https://walker-data.com/tidycensus/articles/basic-usage.html) on how to get started with `{tidycensus}` packages. 
+Remember to add your `.Renviron` to `.gitignore` so that you do not share your API keys. 
 
 :::
 
@@ -686,7 +711,7 @@ tm_shape(income_md) +
 <br>
 <br>
 
-**Your turn in HW 5:**
+**Your turn in HW 3:**
 
 - Choose a U.S. state
 
@@ -731,7 +756,7 @@ countdown::countdown(
 
 <div class="page-center vertical-center">
 <p class="custom-subtitle bottombr">{{<fa pen-to-square title="edit or fill out survey">}} Fill out the end-of-class survey </p>
-<p class="caption-text">*~ This is the end of Lecture 5 ~*</p>
+<p class="caption-text">*~ This is the end of Lecture 3 ~*</p>
 </div>
 
 ```{r}
