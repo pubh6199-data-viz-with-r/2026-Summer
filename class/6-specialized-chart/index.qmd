@@ -39,13 +39,13 @@ library(tidyverse)
 - **Source**: UCI Machine Learning Repository  
   [https://archive.ics.uci.edu/ml/datasets/forest+fires](https://archive.ics.uci.edu/ml/datasets/forest+fires)
 
-- **Context**: Collected from the Montesinho Natural Park in Portugal, this dataset captures weather conditions and fire activity over 200+ days.
+- **Context**: Collected from the Montesinho Natural Park in Portugal, this dataset captures weather conditions and fire activity over 200+ days. The task was to predict the burned area of forest fires based on meteorological and fire weather indices.
 
 - **Variables**:
   - `month`, `day`: Temporal context
   - `temp`, `RH`, `wind`, `rain`: Daily weather
   - `FFMC`, `DMC`, `DC`, `ISI`: Fire weather indices
-  - `area`: Burned area in hectares
+  - `area`: Outcome of interest, burned area in hectares
   
 :::
 
@@ -78,10 +78,6 @@ glimpse(forest)
   - Demographics: `age`, `sex`, `race`, `education`, `marital-status`
   - Employment: `workclass`, `occupation`, `hours-per-week`
   - Target: `income` (>50K or ≤50K)
-
-- **Use in Class**:
-  - *Sankey diagram*: Show flows like `education → occupation → income`
-  - *Parallel coordinates*: Visualize patterns across age, hours, and income class
 
 ## Adult Income Dataset {.smaller}
 
@@ -418,7 +414,6 @@ radar_data <- forest %>%
   mutate(across(where(is.numeric), rescale))  # normalize to [0, 1]
 
 # Convert to fmsb format
-# fmsb expects first two rows to be max and min
 radar_df <- radar_data %>%
   tibble::column_to_rownames("area_group") %>%
   as.data.frame()
@@ -708,6 +703,7 @@ ggplot(flow_data_filtered,
     theme(legend.position = "bottom")
 ```
 ## What is a Parallel Coordinates Plot (PCP)? {.smaller}
+> PCP does not show the classic Cartesian coordinate plane, but each numerical variable is given its own axis. All axes are placed **parallel**, **vertical**, and **equally spaced**.
 
 - A visualization for **multivariate data**, especially numeric.
 - Each line represents:
