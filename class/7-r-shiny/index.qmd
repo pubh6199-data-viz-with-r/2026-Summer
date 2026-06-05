@@ -1,7 +1,7 @@
 ---
 title: "Lecture 4.Introduction to R Shiny"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: June 10, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 9, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -494,8 +494,12 @@ shinyApp(ui = ui, server = server)
 <br>
 <br>
 In-Class Activity:
-
+<br>
+<br>
 Add a second slider input so that the app reacts to the number of random data points generated for the histogram.
+<br>
+<br>
+Download starter code from [lecture notes zip file](https://pubh6199-data-viz-with-r.github.io/2026-Summer/class/7-r-shiny/7-r-shiny.zip)
 
 :::
 
@@ -522,7 +526,9 @@ countdown::countdown(
 
 ## Two-file shiny app with a dataset {.smaller}
 
-In this tutorial, we will build an interactive R Shiny application step-by-step. Our app will:
+In this tutorial, we will build an interactive R Shiny application step-by-step. 
+
+Our app will:
 
 - Display a scatter plot using the `mtcars` dataset
 - Allow users to choose x-axis and y-axis variables
