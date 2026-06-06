@@ -1,7 +1,7 @@
 ---
 title: "Lab 4. Final Project Plan"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: June 12, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 11, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -73,6 +73,7 @@ resources:
   _Meta's Data for Good program provides access to datasets for social good projects._
 - [**AWS Data Exchange**](https://aws.amazon.com/data-exchange/)  
   _Amazon Web Services' marketplace for data, including free and paid datasets across various domains._
+
 ---
 
 ## R packages with built-in data {.smaller}
@@ -94,7 +95,7 @@ resources:
   _NOAA's National Centers for Environmental Information, providing access to climate and weather data._
 - [**USGS Earth Explorer**](https://earthexplorer.usgs.gov/)
   _U.S. Geological Survey's Earth Explorer, a tool for searching and downloading satellite imagery, aerial photography, digital elevation model data, land cover data, and many others._
-- [**SEDAC (Columbia Univ.)**](https://www.earthdata.nasa.gov/centers/sedac-daac)
+- [**SEDAC (NASA -> Harvard Dataverse)**](https://dataverse.harvard.edu/dataverse/SEDAC)
   _Socioeconomic data and applications center, synthesizes earth science and socioeconomic into gridded data_
 
 
@@ -132,84 +133,9 @@ Now let’s explore and build something great!
 - GitHub flow for project collaboration
 - Project Kick-off
 
-## Introducing the five fantastic teams!
+## Introducing the three fantastic teams!
 
-![](images/simpsons.webp)
-
-## Team Homer {.smaller}
-
-::: {.column width = "70%"}
-
-Members: Alia Jamil, Nina Wubu
-
-Topic: Climate, natural disasters and health disparities
-
-:::
-
-::: {.column width = "30%"}
-
-![](images/homer.png)
-:::
-
-## Team Marge {.smaller}
-
-::: {.column width = "70%"}
-
-Members: Amel Attalla, Belen Zemas
-
-Topic: Sexual health and vulnerable populations
-
-:::
-
-::: {.column width = "30%"}
-
-![](images/marge.png)
-:::
-
-## Team Bart {.smaller}
-
-::: {.column width = "70%"}
-
-Members: Sora Ely, Ashlan Jackson
-
-Topic: Health systems and global health
-
-:::
-
-::: {.column width = "30%"}
-
-![](images/bart.png)
-:::
-
-## Team Lisa {.smaller}
-
-::: {.column width = "70%"}
-
-Members: Riya Belani, Molayo Ifebajo
-
-Topic: Behavioral health and digital platforms
-
-:::
-
-::: {.column width = "30%"}
-
-![](images/lisa.png)
-:::
-
-## Team Maggie {.smaller}
-
-::: {.column width = "70%"}
-
-Members: Jordi Fischbach, Ahmed Shah
-
-Topic: To be determined
-
-:::
-
-::: {.column width = "30%"}
-
-![](images/maggie.png)
-:::
+![](images/toystorytrio.jpg)
 
 ## Outline for today
 
@@ -356,23 +282,21 @@ Source: [Allison Horst and Julia Lowndes](https://openscapes.org/blog/2022-05-27
 
 | Assignment       | Description                 | Weight     |
 |----------------|-----------------------------|----------|
-| Project proposal    | You did this for HW3. Outlines your topic, research questions, and initial ideas      | 7%  |
-| Project plan        |You are doing this for Lab4. Includes your final topic, selected data sources, and visualization plan  | 3% |
-| Project prototype V1 | You will bring this to class on June 24th and meet one-on-one with the teaching team to get feedback | 7%
-| Final data visualization product  | Include at least three polished visualizations that answer your research questions | 18%  |
-| Final project presentation | You will present your project in a short, engaging walkthrough in class on June 26th | 10% |
-| Peer evaluation for final project | You will complete this in class on June 26th to provide constructive feedback to your peers | 5%|
+| Brainstorm project ideas    | You did this today. Outlines your topic, research questions, and initial ideas      | Part of participation  |
+| Project plan        |You are doing this for Lab4. Includes your final topic, selected data sources, and visualization plan  | 3.75% |
+| Final data visualization product  | Include at least three polished visualizations that answer your research questions | 20%  |
+| Final project presentation | You will present your project in a short, engaging walkthrough in class on June 26th | 13% |
+| Peer evaluation for final project | You will complete this in class on June 25th to provide constructive feedback to your peers | 7%|
 
 ## Project schedule {.smaller}
 
 | Week | Due date | Deliverable |
 |------|----------|-------------|
-| 4    | June 9 | Project proposal |
-| 5    | June 16 | Project plan |
-| 6    | June 24 | Project prototype V1 |
-| 6    | June 26 | Final data visualization product |
-| 6    | June 26 | Final project presentation |
-| 6    | June 26 | Peer evaluation for final project |
+| 5    | June 15 | Project plan |
+| 6    | June 23 | Project prototype V1 |
+| 6    | June 25 | Final data visualization product |
+| 6    | June 25 | Final project presentation |
+| 6    | June 25 | Peer evaluation for final project |
 
 
 ## Team policies {.smaller}
@@ -396,7 +320,7 @@ In-Class Activity:
 
 | Task | Deadline | Person responsible |
 |------|----------|-------------|
-| (e.g.) set up GitHub repo    | June 13 | Silas |
+| (e.g.) set up GitHub repo    | June 12 | Bogdan |
 
 :::
 
@@ -466,7 +390,7 @@ Accompanying your visualizations, you should also include a **write-up around 50
 - **Live demo** of your visualizations (if applicable)
 - One to two **challenges** you encountered during this project and how you overcame them
 - One to two **achievements** you are proud of in this project
-- The presentation format is flexible, bring your laptop to present, and submit the presentation and final data visualization product as `HW6`
+- The presentation format is flexible, bring your laptop to present, and submit the presentation and final data visualization product as `HW5`
 
 
 ## Evaluation {.smaller}
@@ -526,39 +450,6 @@ Source: [CS171](https://www.cs171.org/2024/)
 ![](images/think-aloud.webp)
 
 :::
-
-## {background-image="images/in-class-activity.png"}
-
-::: {style="text-align: center; font-size: 80%;"}
-<br>
-<br>
-<br>
-<br>
-In-Class Activity: Think aloud study demo
-
-**ClimaWATCH**
-
-[https://climawatch.climate.mathematica.org/](https://climawatch.climate.mathematica.org/)
-
-_Imagine you're briefing a policymaker about heat risks in vulnerable counties. What would you show them from this tool?_
-
-:::
-
-```{r}
-countdown::countdown(
-  minutes = 10,
-  bottom = 0,
-  # Fanfare when it's over
-  play_sound = TRUE,
-  color_border              = "#FFFFFF",
-  color_text                = "#7aa81e",
-  color_running_background  = "#7aa81e",
-  color_running_text        = "#FFFFFF",
-  color_finished_background = "#ffa07a",
-  color_finished_text       = "#FFFFFF",
-  font_size = "2em",
-  )
-```
 
 ##  End-of-Class Survey {background="#033C5A"}
 <br>
