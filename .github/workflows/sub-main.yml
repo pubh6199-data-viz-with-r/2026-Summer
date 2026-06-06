@@ -7,6 +7,10 @@ on:
     # Scheduled to run at midnight EST (5:00 UTC) every Sunday
     - cron: '0 5 * * 0'
 
+concurrency:
+  group: deploy-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
