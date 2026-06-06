@@ -126,7 +126,7 @@ Your final visualization should:
 
 - Use data from 1980 to 2024 only
 
-- Include a title (short, descriptive), subtitle (main takeaway), caption (e.g., “Data: NOAA Billion-Dollar Disasters (accessed 2025)”)
+- Include a title (short, descriptive), subtitle (main takeaway), caption (e.g., “Data: NOAA Billion-Dollar Disasters (accessed 2026)”)
 
 - Apply strategies for highlighting patterns or trends (e.g., highlighting recent years, distinguishing types of disasters)
 

@@ -1,7 +1,7 @@
 ---
 title: "Homework 3"
 author: "Your Name"
-date: "2025-XX-XX"
+date: "2026-XX-XX"
 params:
   number: 3
   purpose: "The purpose of this assignment is to brainstorm and propose a potential direction for your final project. The teaching team will use your submission to form pairs for the actual project based on shared interests or complementary ideas."

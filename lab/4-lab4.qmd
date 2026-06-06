@@ -1,7 +1,7 @@
 ---
 title: "Lab 4"
 author: "Team member 1, Team member 2"
-date: "2025-XX-XX"
+date: "2026-XX-XX"
 params:
   number: 4
   purpose: "The purpose of this lab to for you to develop a team policy and the project plan for the final project."
@@ -97,7 +97,7 @@ Type your response here.
 ::: {.callout-note title="Your Answer"}
 | Item       | Deadline                 | Person responsible     |
 |----------------|-----------------------------|----------|
-| (e.g.) Set up GitHub    | June 13, 2025 | Silas  |
+| (e.g.) Set up GitHub    | June 12, 2026 | Bogdan  |
 | add your items here | add your deadlines here | add your names here |
 
 :::
@@ -154,7 +154,7 @@ Your answer here
 ::: {.callout-note title="Your Answer"}
 | Milestone       | Deadline                 | Person responsible     |
 |----------------|-----------------------------|----------|
-| (e.g.) Data collection    | June 20, 2025 | Silas  |
+| (e.g.) Data collection    | June 19, 2026 | Cindy  |
 | add your milestones here | add your deadlines here | add your names here |
 :::
 
