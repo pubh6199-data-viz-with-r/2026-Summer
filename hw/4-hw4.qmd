@@ -148,7 +148,7 @@ Type your app's URL here.
 
 ## BONUS: Compare Large Language Models
 
-In this bonus question, you will compare the performance of different large language models (LLMs) in generating Shiny app code. Shiny Assistant uses Anthropic's Claude. You can use any other LLMs available to you, such as OpenAI's GPT-4o, Google's Gemini, DeepSeek, or others.
+In this bonus question, you will compare the performance of different large language models (LLMs) in generating Shiny app code. Shiny Assistant uses Anthropic's Claude. You can use any other LLMs available to you, such as OpenAI's GPT, Google's Gemini, DeepSeek, or others.
 
 Write a prompt to each LLM to generate a Shiny app code that meets the same requirements as in Q6, you can use the same prompt you used for Q6 or start a new one. Then, compare the generated code from different models based on the following criteria:
 
