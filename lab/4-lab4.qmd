@@ -97,7 +97,7 @@ Type your response here.
 ::: {.callout-note title="Your Answer"}
 | Item       | Deadline                 | Person responsible     |
 |----------------|-----------------------------|----------|
-| (e.g.) Set up GitHub    | June 13, 2025 | Silas  |
+| (e.g.) Set up GitHub    | June 12, 2026 | Bogdan  |
 | add your items here | add your deadlines here | add your names here |
 
 :::
