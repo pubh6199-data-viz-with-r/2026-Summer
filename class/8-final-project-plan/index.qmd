@@ -137,6 +137,67 @@ Now let’s explore and build something great!
 
 ![](images/toystorytrio.jpg)
 
+## Team Woody {.smaller}
+
+::: {.column width = "70%"}
+
+Members: Name 1, Name 2
+
+Topic: XYZ
+
+:::
+
+::: {.column width = "25%"}
+
+![](images/woody.webp)
+
+:::
+
+## Team Buzz {.smaller}
+
+::: {.column width = "50%"}
+
+Members: Name 1, Name 2
+
+Topic: XYZ
+
+:::
+
+::: {.column width = "50%"}
+
+![](images/buzz.webp)
+
+:::
+
+
+## Team Jessie {.smaller}
+
+::: {.column width = "70%"}
+
+Members: Name 1, Name 2
+
+Topic: XYZ
+
+:::
+
+::: {.column width = "30%"}
+
+![](images/jessie.png)
+
+:::
+
+## Time to accept lab4 assignment {.smaller}
+
+>Coordinate with your partner before either of you accepts the assignment — the order matters.
+
+1. Find your partner and agree on a team name in advance (e.g., **_team-woody_**, lowercase, no spaces). Both of you need to know the exact name.
+
+2. **Student 1** opens the assignment link → clicks Accept this assignment → when prompted, chooses Create a new team and types your agreed-upon team name.
+
+3. **Student 2** opens the same assignment link → clicks Accept this assignment → instead of creating a new team, scrolls the list of existing teams, finds your partner's team name, and clicks Join.
+
+4. You'll both now see the same starter repository. Clone it locally and collaborate as usual (push, pull, branches, PRs).
+
 ## Outline for today
 
 - Overview of common public data repository for developing data visualization projects
