@@ -141,9 +141,9 @@ Now let’s explore and build something great!
 
 ::: {.column width = "70%"}
 
-Members: Name 1, Name 2
+Members: Bao, Jean
 
-Topic: XYZ
+Topic: HIV prevalence and treatment resources in urban areas in the U.S.
 
 :::
 
@@ -157,9 +157,9 @@ Topic: XYZ
 
 ::: {.column width = "50%"}
 
-Members: Name 1, Name 2
+Members: Abby, Sharon
 
-Topic: XYZ
+Topic: Hazardous waste faculties vulnerability to wild fire risks or flooding risk, how risk has changed over time, and how they change under different climate change scenarios. How does FEMA cuts affect all of these?
 
 :::
 
@@ -174,9 +174,9 @@ Topic: XYZ
 
 ::: {.column width = "70%"}
 
-Members: Name 1, Name 2
+Members: Salem, Megan
 
-Topic: XYZ
+Topic: Chemical production facilities and maternal health outcomes in communities across the U.S.
 
 :::
 
