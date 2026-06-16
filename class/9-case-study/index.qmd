@@ -1,8 +1,8 @@
 ---
-title: "Lecture 3. Case Study"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: June 3, 2025
-author: Elena Jimenez, M.A.
+title: "Lecture 5. EWG x GWSPH: Data Visualization"
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 16, 2026
+author: Sydney Evans, M.P.H., Varun Subramaniam, M.S.
 format: 
   revealjs:
     pdf: true
@@ -18,14 +18,17 @@ format:
 
 **Reading assignment**:
 
-- [https://www.storytellingwithdata.com/chart-guide](https://www.storytellingwithdata.com/chart-guide)
-- [https://www.toptal.com/designers/ux/data-visualization-mistakes](https://www.toptal.com/designers/ux/data-visualization-mistakes)
+- [PFAS Treatment as an Opportunity for Broader Drinking Water Improvements: Evidence from U.S. Water Systems. S](https://pubs.acs.org/doi/10.1021/acsestwater.5c00519)
 
-**About your instructor**:
 
-Elena Jimenez (M.A., International Education, George Washington University) is a user-experienced designer at Mathematica with expertise in data visualization, web application designs, facilitating co-design workshops, and conducting user-experience research to increase the efficacy of services and digital platforms. She has worked with foundations, states, and different departments within the federal government to help teams identify problems and develop solutions through co-design workshops, developing prototypes, and feedback sessions. 
+**About your instructors**:
 
+Sydney Evans, MPH. Senior Science Analyst
+
+Varun Subramaniam, MS. Science Analyst
+
+Data Science Research, Environmental Working Group
 
 **Slides**:
 
-Please use the ["Download PDF"](https://pubh6199-data-viz-with-r.github.io/2025-Summer/class/5-case-study/5-case-study.pdf) button to download the slides.
+Please use the ["Download PDF"](https://pubh6199-data-viz-with-r.github.io/2026-Summer/class/9-case-study/9-case-study.pdf) button to download the slides.
