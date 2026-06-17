@@ -48,7 +48,7 @@ Our goal for this exercise is to produce a `geofacet`-ed plot of the cumulative 
 
 ### Load required packages and datasets
 
-```{r}
+```{r, eval = FALSE}
 
 library(tidyverse)
 library(geofacet)
