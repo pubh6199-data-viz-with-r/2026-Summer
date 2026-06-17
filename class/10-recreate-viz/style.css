@@ -1,4 +1,6 @@
-
+.reveal .title {
+  font-size: 1.9em; /* Shrinks the main title slide font */
+}
 
 .border {
   border: 1px solid #dee2e6;
