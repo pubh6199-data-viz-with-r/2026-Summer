@@ -138,7 +138,7 @@ Load necessary libraries and the data...
 
 library(tidyverse)
 library(showtext)
-library(geofacet)
+#library(geofacet)
 library(ggalluvial)
 library(ggtext)
 
