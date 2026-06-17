@@ -1,7 +1,7 @@
 ---
 title: "Final Project Prototype"
-subtitle: "Class meet on zoom"
-date: June 24, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 23, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -29,11 +29,9 @@ resources:
 
 | Team | Members | Time slot|
 |------|----------|-------------|
-| Homer   | Alia Jamil, Nina Wubu | 3:10 - 3:30 pm |
-| Marge    | Amel Attalla, Belen Zemas | 3:35 - 3:55 pm|
-| Bart    | Sora Ely, Ashlan Jackson | 4:00 - 4:20 pm |
-| Lisa    | Riya Belani, Molayo Ifebajo | 4:25 - 4:45 pm |
-| Maggie    | Jordi Fischbach, Ahmed Shah | 4:50 - 5:10 pm |
+| Jessie   | Megan Liu, Salem Yohannes | 3:10 - 3:40 pm |
+| Buzz    | Abigail Schmitt, Sharon Hartzell | 3:50 - 4:20 pm|
+| Woody    | Bao-Tien Duong, Jean Jacques Brou | 4:30 - 5:00 pm |
 
 ::: takeaway
 

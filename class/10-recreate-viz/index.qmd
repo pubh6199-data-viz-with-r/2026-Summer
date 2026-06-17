@@ -269,5 +269,5 @@ ggsave("2022/2022 - Week 23/artists.png", dpi = 600, width = 8.5, height = 6, bg
 
 ::: incremental
 - The US Environmental Protection Agency (EPA) monitors a list of *unregulated* contaminants every five years in public water systems as part of the Unregulated Contaminant Monitoring Rule (UCMR). The fifth cycle included 29 different PFAS (per- and polyfluoroalkyl substances or "forever chemicals") and lithium.
-- *We'll use the most recent release of these data to visualize trends in PFAS monitoring over time across different states. Download zip file from the [course website](). The zip file contains `lab5.qmd`, which uses a pre-processed dataset, `ucmr5_dat.csv`*
+- *We'll use the most recent release of these data to visualize trends in PFAS monitoring over time across different states. Download zip file from the [course website](https://pubh6199-data-viz-with-r.github.io/2026-Summer/class/10-recreate-viz/10-recreate-viz.zip). The zip file contains `lab5.qmd`, which uses a pre-processed dataset, `ucmr5_dat.csv`*
 :::
