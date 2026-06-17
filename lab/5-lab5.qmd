@@ -48,10 +48,11 @@ Our goal for this exercise is to produce a `geofacet`-ed plot of the cumulative 
 
 ### Load required packages and datasets
 
-```{r, eval = FALSE}
+```{r}
 
 library(tidyverse)
-library(geofacet)
+# uncomment this line to load the geofacet package
+# library(geofacet)
 
 ucmr5 <- read_csv("data/ucmr5_dat.csv")
 
