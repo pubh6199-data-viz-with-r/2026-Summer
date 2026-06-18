@@ -9,6 +9,8 @@ install.packages(c(
     'ggrepel',
     'ggrepel',
     'ggridges',
+    'ggtext',
+    'geofacet',
     'here',
     'hrbrthemes',
     'htmltools',

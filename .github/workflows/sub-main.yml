@@ -59,6 +59,8 @@ jobs:
             any::ggthemes
             any::GGally
             any::gghighlight
+            any::ggtext
+            any::geofacet
             any::see
             any::leaflet
             any::leaflet.extras
