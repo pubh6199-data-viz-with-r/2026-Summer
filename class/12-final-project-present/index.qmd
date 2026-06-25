@@ -58,8 +58,8 @@ Accompanying your visualizations, you should also include a **write-up around 50
   </thead>
   <tbody>
     <tr>
-      <td>Woody</td>
-      <td>Bao Duong, Jean Jacques Brou</td>
+      <td>Jessie</td>
+      <td>Megan Liu, Salem Yohannes</td>
       <td>3:20 - 3:35 pm</td>
     </tr>
     <tr>
@@ -68,8 +68,8 @@ Accompanying your visualizations, you should also include a **write-up around 50
       <td>3:40 - 3:55 pm</td>
     </tr>
     <tr>
-      <td>Jessie</td>
-      <td>Megan Liu, Salem Yohannes</td>
+      <td>Woody</td>
+      <td>Bao Duong, Jean Jacques Brou</td>
       <td>4:00 - 4:15 pm</td>
     </tr>
     <tr style="background-color: #fff3cd;">
