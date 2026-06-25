@@ -1,7 +1,7 @@
 ---
 title: "Final Project Showcase"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2025"
-date: June 26, 2025
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 25, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
   revealjs:
@@ -35,7 +35,7 @@ Accompanying your visualizations, you should also include a **write-up around 50
 :::
 
 ## Final project presentation {.smaller}
-- **10 minutes** presentation
+- **10-12 minutes** presentation
 - What questions do you set out to answer with your visualizations? Why are they important?
 - Your **data source** and why they are chosen to answer your questions
 - Your intended audience
@@ -44,7 +44,7 @@ Accompanying your visualizations, you should also include a **write-up around 50
 - **Live demo** of your visualizations (if applicable)
 - One to two **challenges** you encountered during this project and how you overcame them
 - One to two **achievements** you are proud of in this project
-- The presentation format is flexible, bring your laptop to present, and submit the presentation and final data visualization product as `HW6`
+- The presentation format is flexible, bring your laptop to present, and submit the presentation and final data visualization product as `HW5`
 
 
 ## Final project showcase schedule {.smaller}
@@ -58,39 +58,29 @@ Accompanying your visualizations, you should also include a **write-up around 50
   </thead>
   <tbody>
     <tr>
-      <td>Maggie</td>
-      <td>Jordi Fischbach, Ahmed Shah</td>
-      <td>3:20 - 3:30 pm</td>
+      <td>Woody</td>
+      <td>Bao Duong, Jean Jacques Brou</td>
+      <td>3:20 - 3:35 pm</td>
     </tr>
     <tr>
-      <td>Homer</td>
-      <td>Alia Jamil, Nina Wubu</td>
-      <td>3:35 - 3:45 pm</td>
+      <td>Buzz</td>
+      <td>Sharon Hartzell, Abigail Schmitt</td>
+      <td>3:40 - 3:55 pm</td>
     </tr>
     <tr>
-      <td>Marge</td>
-      <td>Amel Attalla, Belen Zemas</td>
-      <td>3:50 - 4:00 pm</td>
-    </tr>
-    <tr>
-      <td>Bart</td>
-      <td>Sora Ely, Ashlan Jackson</td>
-      <td>4:05 - 4:15 pm</td>
-    </tr>
-    <tr>
-      <td>Lisa</td>
-      <td>Riya Belani, Molayo Ifebajo</td>
-      <td>4:20 - 4:30 pm</td>
+      <td>Jessie</td>
+      <td>Megan Liu, Salem Yohannes</td>
+      <td>4:00 - 4:15 pm</td>
     </tr>
     <tr style="background-color: #fff3cd;">
       <td>Fill out peer evaluations</td>
       <td>All</td>
-      <td>4:30 - 4:40 pm</td>
+      <td>4:20 - 4:30 pm</td>
     </tr>
     <tr style="background-color: #fff3cd;">
       <td>Tally peer evaluations</td>
       <td>Teaching team</td>
-      <td>4:40 - 4:50 pm</td>
+      <td>4:35 - 4:45 pm</td>
     </tr>
     <tr style="background-color: #fff3cd;">
       <td>Announce award winners!</td>
@@ -110,25 +100,26 @@ Accompanying your visualizations, you should also include a **write-up around 50
 <p class="caption-text">*~ Drum roll, please ~*</p>
 </div>
 
+## Smoothest Data Import
 
-## Smoothest Pipeline Award
-
-_For piping it all together with grace and clarity._
+_For bringing messy files into R cleanly, quickly, and without a parsing problem in sight._
 
 . . .
 
 ::: {.column width="50%"}
 
-Team Lisa
+Team TBD
 
-- Molayo Ifebajo
-- Riya Belani
+- Member 1
+- Member 2
+
 
 :::
 
 ::: {.column width="50%"}
 
-![](images/magrittr.webp)
+![](images/readr.webp)
+
 :::
 
 ## Cleanest Data Workflow
@@ -139,10 +130,12 @@ _For untangling the mess and tidying like a pro._
 
 ::: {.column width="50%"}
 
-Team Bart
+Team TBD
 
-- Sora Ely
-- Ashlan Jackson
+- Member 1
+- Member 2
+
+
 :::
 
 ::: {.column width="50%"}
@@ -151,6 +144,27 @@ Team Bart
 
 :::
 
+## Factor Whisperer Award
+
+_For taming unruly categories and putting every factor in its proper order._
+
+. . .
+
+::: {.column width="50%"}
+
+Team TBD
+
+- Member 1
+- Member 2
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/forcats.webp)
+
+:::
 
 ## Most Stunning Visualization
 
@@ -160,10 +174,11 @@ _For plotting like an artist and letting the data speak._
 
 ::: {.column width="50%"}
 
-Team Maggie
+Team TBD
 
-- Jordi Fischbach
-- Ahmed Shah
+- Member 1
+- Member 2
+
 :::
 
 ::: {.column width="50%"}
@@ -181,10 +196,11 @@ _For making your data shine with interactivity and style._
 
 ::: {.column width="50%"}
 
-Team Maggie
+Team TBD
 
-- Jordi Fischbach
-- Ahmed Shah
+- Member 1
+- Member 2
+
 :::
 
 ::: {.column width="50%"}
@@ -192,27 +208,6 @@ Team Maggie
 ![](images/shiny.webp)
 
 :::
-
-## Best Quarto Report
-
-_For seamless communication of complex work through a polished and reproducible report._
-
-. . .
-
-::: {.column width="50%"}
-
-Team Marge
-
-- Amel Attalla
-- Belen Zemas
-:::
-
-::: {.column width="50%"}
-
-![](images/quarto.webp)
-
-:::
-
 
 
 ## Best Team Collaboration
@@ -223,15 +218,16 @@ _For showing that collaboration is the most powerful package of all._
 
 ::: {.column width="50%"}
 
-Team Homer
+Team TBD
 
-- Alia Jamil
-- Nina Wubu
+- Member 1
+- Member 2
+
 :::
 
 ::: {.column width="50%"}
 
-![](images/rstudio.webp)
+![](images/tidyverse.webp)
 
 :::
 
