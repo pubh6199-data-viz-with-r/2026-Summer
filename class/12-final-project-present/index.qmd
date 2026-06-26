@@ -108,10 +108,10 @@ _For bringing messy files into R cleanly, quickly, and without a parsing problem
 
 ::: {.column width="50%"}
 
-Team TBD
+Team Jessie
 
-- Member 1
-- Member 2
+- Megan Liu
+- Salem Yohannes
 
 
 :::
@@ -130,10 +130,10 @@ _For untangling the mess and tidying like a pro._
 
 ::: {.column width="50%"}
 
-Team TBD
+Team Woody
 
-- Member 1
-- Member 2
+- Bao Duong
+- Jean Jacques Brou
 
 
 :::
@@ -152,10 +152,10 @@ _For taming unruly categories and putting every factor in its proper order._
 
 ::: {.column width="50%"}
 
-Team TBD
+Team Buzz
 
-- Member 1
-- Member 2
+- Sharon Hartzell
+- Abigail Schmitt
 
 
 :::
@@ -174,10 +174,10 @@ _For plotting like an artist and letting the data speak._
 
 ::: {.column width="50%"}
 
-Team TBD
+Team Buzz
 
-- Member 1
-- Member 2
+- Sharon Hartzell
+- Abigail Schmitt
 
 :::
 
@@ -196,10 +196,10 @@ _For making your data shine with interactivity and style._
 
 ::: {.column width="50%"}
 
-Team TBD
+Team Jessie
 
-- Member 1
-- Member 2
+- Megan Liu
+- Salem Yohannes
 
 :::
 
@@ -218,10 +218,10 @@ _For showing that collaboration is the most powerful package of all._
 
 ::: {.column width="50%"}
 
-Team TBD
+Team Woody
 
-- Member 1
-- Member 2
+- Bao Duong
+- Jean Jacques Brou
 
 :::
 
