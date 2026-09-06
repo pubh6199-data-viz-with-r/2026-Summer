@@ -1,0 +1,21 @@
+{
+  "hash": "272c4fd4d7a754223793579b3ef33c44",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Final Project Plan\"\nparams:\n  class: \"8-final-project-plan\"\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n\n\n\n::: {.cell}\n\n:::\n\n\n::: {.grid}\n\n::: {.g-col-6}\n\n**KEYBOARD SHORTCUTS FOR SLIDES:**\n\n- Use <kbd>←</kbd> and <kbd>→</kbd> to navigate through the slides.\n- Use <kbd>f</kbd> to toggle full screen.\n- Use <kbd>o</kbd> to view an overview of all slides.\n- Use <kbd>h</kbd> to see a list of other shortcuts.\n\n:::\n\n::: {.g-col-3}\n\n::: {.class-buttons}\n\n**SLIDES**\n\n<a href=8-final-project-plan/index.html class=\"btn-slides\" target=\"_blank\"><i class=\"fas fa-external-link-alt\"></i> View slides</a>\n\n<a href=8-final-project-plan/8-final-project-plan.pdf class=\"btn-slides\"><i class=\"fas fa-file-pdf\"></i> Download PDF</a>\n\n:::\n\n:::\n\n::: {.g-col-3}\n\n::: {.class-buttons}\n\n**CLASS PRACTICE**\n\n<a href=8-final-project-plan/8-final-project-plan.zip class=\"btn-notes\"><i class=\"fas fa-download\"></i> Notes zip file</a>\n\n:::\n\n:::\n\n:::\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"shareagain\" style=\"min-width:300px;margin:1em auto;\" data-exeternal=\"1\">\n<iframe src=\"8-final-project-plan/index.html\" width=\"1600\" height=\"900\" style=\"border:2px solid currentColor;\" loading=\"lazy\" allowfullscreen></iframe>\n<script>fitvids('.shareagain', {players: 'iframe'});</script>\n</div>\n```\n\n:::\n:::\n\n\n------------------------------------------------------------------------\n",
+    "supporting": [
+      "8-final-project-plan_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<script src=\"../site_libs/fitvids-2.1.1/fitvids.min.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
