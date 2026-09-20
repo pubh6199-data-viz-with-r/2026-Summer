@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Jahred Liddie, PhD">
+  <meta name="dcterms.date" content="2026-06-18">
+  <title>PUBH 6199: Visualizing Data with R – Lab 5.   Small Multiples, Big Insights:  Maps &amp; TidyTuesday in R</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Lab 5.  Small Multiples, Big Insights: Maps &amp; TidyTuesday in R – PUBH 6199: Visualizing Data with R">
+<meta property="og:description" content="PUBH 6199: Visualizing Data with R, Summer 2026">
+<meta property="og:image" content="https://pubh6199-data-viz-with-r.github.io/2026-Summer/class/10-recreate-viz/images/logo.png">
+<meta property="og:site_name" content="PUBH 6199: Visualizing Data with R">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image:height" content="600">
+<meta property="og:image:width" content="518">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Lab 5. <br> Small Multiples, Big Insights: <br>Maps &amp; TidyTuesday in R</h1>
+  <p class="subtitle">PUBH 6199: Visualizing Data with R, Summer 2026</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Jahred Liddie, PhD
+</div>
+</div>
+</div>
+
+  <p class="date">2026-06-18</p>
+</section>
+<section id="outline-for-today" class="slide level2 smaller">
+<h2>Outline for today</h2>
+<ul>
+<li><strong>#tidytuesday: a weekly social data project</strong>
+<ul>
+<li>#tidytuesday as a helpful, fun practice</li>
+<li>My experience with #tidytuesday</li>
+</ul></li>
+<li>Geofacet-ing in R</li>
+<li>Live walkthrough with unregulated drinking water contaminant monitoring data</li>
+<li>Q&amp;A and summary</li>
+</ul>
+</section>
+<section id="about-me" class="slide level2 smaller">
+<h2>About me</h2>
+<ul>
+<li><p>Jahred Liddie, Postdoctoral Associate in the Water, Health, and Opportunity Lab at GWSPH</p></li>
+<li><p>Research focuses: drinking water quality, exposure assessment, emerging contaminants, and environmental justice</p></li>
+<li><p>Hobbies: flute, tennis, and playing with my dog, Georgette</p></li>
+</ul>
+<center>
+<img data-src="images/georgette.jpg" width="350">
+</center>
+</section>
+<section id="what-is-tidytuesday" class="slide level2 smaller">
+<h2>What is #tidytuesday?</h2>
+<ul>
+<li><p>#tidytuesday is a weekly social data project organized by the <a href="https://dslc.io/">Data Science Learning Community</a> since 2018</p></li>
+<li><p>Each Monday, a curated dataset is posted to their <a href="https://github.com/rfordatascience/tidytuesday">Github repo</a></p></li>
+<li><p>Participants explore the data and share visualizations on social media (formerly on Twitter, now Bluesky)</p></li>
+</ul>
+<center>
+<img data-src="images/tt_logo.png" width="420">
+</center>
+</section>
+<section id="some-other-notes-on-tidytuesday" class="slide level2 smaller">
+<h2>Some other notes on TidyTuesday</h2>
+<ul>
+<li>Participants also encouraged to share code. This is nice since there are some very experienced R users with public TidyTuesday portfolios!</li>
+<li>The focus is on <strong>exploring</strong> data, rather than establishing causal relationships.</li>
+<li>Participants can also submit datasets for future weeks</li>
+</ul>
+</section>
+<section id="past-example-datasets" class="slide level2 smaller">
+<h2>Past example datasets</h2>
+<ul>
+<li><p>Bob Ross paintings</p></li>
+<li><p>Weekly US gas prices</p></li>
+<li><p><em>Stranger Things</em> dialogue</p></li>
+<li><p>A dataset of all Pokemon and their stats (available from the <code>pokemon</code> package)</p></li>
+</ul>
+<center>
+<img data-src="images/porygon.png" width="200">
+</center>
+</section>
+<section id="my-experience-with-tidytuesday" class="slide level2 smaller">
+<h2>My experience with TidyTuesday</h2>
+<ul>
+<li>I participated first in 2022 as a way to improve my data visualization skills</li>
+<li>Also enjoyed the community</li>
+<li>My full portfolio is available <a href="https://github.com/jahredwithanh/tidytuesday/tree/main">here</a></li>
+</ul>
+</section>
+<section id="some-resources-i-found-helpful" class="slide level2 smaller">
+<h2>Some resources I found helpful…</h2>
+<ul>
+<li><a href="https://r-graph-gallery.com/">The R Graph Gallery</a>: to give me ideas for different chart types</li>
+<li><a href="https://r-charts.com/">R-Charts.com</a>: a similar website, but with more base R and leaflet examples</li>
+<li>Other people’s #tidytuesday repos</li>
+<li>Note: in the age of more widespread LLMs, I find these useful to go to if I’m stuck on a specific formatting issue, but certainly not for making a plot from scratch</li>
+</ul>
+</section>
+<section id="my-very-first-plot" class="slide level2 smaller">
+<h2>My very first plot</h2>
+<p><small>Key packages: <code>cowplot</code>, <code>ggtext</code></small></p>
+
+<img data-src="images/COVID_MWRA.png" class="quarto-figure quarto-figure-center r-stretch" width="550"></section>
+<section id="other-examples-pt-1" class="slide level2 smaller">
+<h2>Other examples (pt 1)</h2>
+<p><small>Key packages: <code>showtext</code>, <code>ggrepel</code></small></p>
+
+<img data-src="images/retail.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="other-examples-pt-2" class="slide level2 smaller">
+<h2>Other examples (pt 2)</h2>
+<p><small>Key packages: <code>showtext</code>, <code>ggrepel</code></small></p>
+
+<img data-src="images/paygap.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="other-examples-pt-3" class="slide level2 smaller">
+<h2>Other examples (pt 3)</h2>
+<p><small>Key packages: <code>gganimate</code>, <code>ggtext</code> </small></p>
+
+<img data-src="images/drought.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="other-examples-pt-4" class="slide level2 smaller">
+<h2>Other examples (pt 4)</h2>
+<p><small>Key packages: <code>sf</code>, <code>ggimage</code>, <code>ggmap</code> </small></p>
+
+<img data-src="images/frog_map.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="web-du-bois-data-portraits-pt-1" class="slide level2 smaller">
+<h2>WEB Du Bois data portraits (pt 1)</h2>
+
+<img data-src="images/dubois_graph2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="web-du-bois-data-portraits-pt-2" class="slide level2 smaller">
+<h2>WEB Du Bois data portraits (pt 2)</h2>
+
+<img data-src="images/dubois_plate27.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="other-examples-pt-5" class="slide level2 smaller">
+<h2>Other examples (pt 5)</h2>
+<p><small>Key packages: <code>geosphere</code>, <code>ggmap</code> </small></p>
+
+<img data-src="images/trade_triangle.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="other-examples-pt-6" class="slide level2 smaller">
+<h2>Other examples (pt 6)</h2>
+
+<img data-src="images/artists.png" class="quarto-figure quarto-figure-center r-stretch" width="5300"></section>
+<section id="what-is-geofacet" class="slide level2 smaller">
+<h2>What is <code>geofacet</code>?</h2>
+<blockquote>
+<p><a href="https://hafen.github.io/geofacet/"><code>geofacet</code></a> is a package developed by Ryan Hafen to display a sequence of plots (like normal <code>facet</code>ing) but within a structure that preserves the original geographical orientation</p>
+</blockquote>
+
+<img data-src="images/artists.png" class="quarto-figure quarto-figure-center r-stretch" width="2500"></section>
+<section id="lets-look-at-some-codept-1" class="slide level2 smaller">
+<h2>Let’s look at some code…(pt 1)</h2>
+<p>Load necessary libraries and the data…</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a aria-label="2"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb1-3"><a aria-label="3"></a><span class="fu">library</span>(geofacet)</span>
+<span id="cb1-4"><a aria-label="4"></a><span class="fu">library</span>(ggalluvial)</span>
+<span id="cb1-5"><a aria-label="5"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb1-6"><a aria-label="6"></a></span>
+<span id="cb1-7"><a aria-label="7"></a><span class="co"># load data and state helper dataframe</span></span>
+<span id="cb1-8"><a aria-label="8"></a>artists <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-09-27/artists.csv'</span>)</span>
+<span id="cb1-9"><a aria-label="9"></a></span>
+<span id="cb1-10"><a aria-label="10"></a><span class="fu">names</span>(artists)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "state"             "race"              "type"             
+[4] "all_workers_n"     "artists_n"         "artists_share"    
+[7] "location_quotient"</code></pre>
+</div>
+</div>
+</section>
+<section id="lets-take-a-look-at-some-code-pt-2" class="slide level2 smaller">
+<h2>Let’s take a look at some code (pt 2)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a>states <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb3-2"><a aria-label="2"></a>  <span class="fu">data.frame</span>(<span class="at">state =</span> datasets<span class="sc">::</span>state.name, </span>
+<span id="cb3-3"><a aria-label="3"></a>             <span class="at">state.abb =</span> datasets<span class="sc">::</span>state.abb),</span>
+<span id="cb3-4"><a aria-label="4"></a>  <span class="fu">data.frame</span>(<span class="at">state =</span> <span class="fu">c</span>(<span class="st">"District</span><span class="sc">\n</span><span class="st">of Columbia"</span>, <span class="st">"Puerto Rico"</span>),</span>
+<span id="cb3-5"><a aria-label="5"></a>             <span class="at">state.abb =</span> <span class="fu">c</span>(<span class="st">"DC"</span>, <span class="st">"PR"</span>))</span>
+<span id="cb3-6"><a aria-label="6"></a>)</span>
+<span id="cb3-7"><a aria-label="7"></a></span>
+<span id="cb3-8"><a aria-label="8"></a><span class="co"># set up data for plotting, calculate necessary new vars</span></span>
+<span id="cb3-9"><a aria-label="9"></a>artists <span class="ot">&lt;-</span> artists <span class="sc">%&gt;%</span></span>
+<span id="cb3-10"><a aria-label="10"></a>  <span class="fu">mutate</span>(<span class="at">POC =</span> <span class="fu">ifelse</span>(race <span class="sc">==</span> <span class="st">"White"</span>, <span class="st">"White"</span>, <span class="st">"People of color"</span>))</span>
+<span id="cb3-11"><a aria-label="11"></a></span>
+<span id="cb3-12"><a aria-label="12"></a>state.summaries <span class="ot">&lt;-</span> artists <span class="sc">%&gt;%</span></span>
+<span id="cb3-13"><a aria-label="13"></a>  <span class="fu">group_by</span>(state, POC) <span class="sc">%&gt;%</span></span>
+<span id="cb3-14"><a aria-label="14"></a>  <span class="fu">summarise</span>(<span class="at">artists_n =</span> <span class="fu">sum</span>(artists_n, <span class="at">na.rm =</span> T),</span>
+<span id="cb3-15"><a aria-label="15"></a>            <span class="at">workers_n =</span> <span class="fu">sum</span>(all_workers_n)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-16"><a aria-label="16"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb3-17"><a aria-label="17"></a></span>
+<span id="cb3-18"><a aria-label="18"></a>totals <span class="ot">&lt;-</span> artists <span class="sc">%&gt;%</span></span>
+<span id="cb3-19"><a aria-label="19"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span></span>
+<span id="cb3-20"><a aria-label="20"></a>  <span class="fu">summarise</span>(<span class="at">total_artists =</span> <span class="fu">sum</span>(artists_n, <span class="at">na.rm =</span> T),</span>
+<span id="cb3-21"><a aria-label="21"></a>            <span class="at">total_workers =</span> <span class="fu">sum</span>(all_workers_n)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-22"><a aria-label="22"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb3-23"><a aria-label="23"></a></span>
+<span id="cb3-24"><a aria-label="24"></a>state.summaries <span class="ot">&lt;-</span> <span class="fu">left_join</span>(state.summaries, totals)</span>
+<span id="cb3-25"><a aria-label="25"></a></span>
+<span id="cb3-26"><a aria-label="26"></a>state.summaries<span class="sc">$</span>perc_artists <span class="ot">&lt;-</span> state.summaries<span class="sc">$</span>artists_n <span class="sc">/</span> state.summaries<span class="sc">$</span>total_artists</span>
+<span id="cb3-27"><a aria-label="27"></a>state.summaries<span class="sc">$</span>perc_workers <span class="ot">&lt;-</span> state.summaries<span class="sc">$</span>workers_n <span class="sc">/</span> state.summaries<span class="sc">$</span>total_workers</span>
+<span id="cb3-28"><a aria-label="28"></a>state.summaries<span class="sc">$</span>diff <span class="ot">&lt;-</span> state.summaries<span class="sc">$</span>perc_workers <span class="sc">-</span> state.summaries<span class="sc">$</span>perc_artists</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="lets-look-at-some-code-pt-3" class="slide level2 smaller">
+<h2>Let’s look at some code (pt 3)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="co"># finally, convert to plot format needed</span></span>
+<span id="cb4-2"><a aria-label="2"></a>state.summaries <span class="ot">&lt;-</span> state.summaries <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a aria-label="3"></a>  <span class="fu">select</span>(state, POC, perc_artists, perc_workers) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a aria-label="4"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols  =</span> <span class="fu">c</span>(<span class="st">"perc_artists"</span>, <span class="st">"perc_workers"</span>), <span class="at">names_to =</span> <span class="st">"type"</span>)</span>
+<span id="cb4-5"><a aria-label="5"></a></span>
+<span id="cb4-6"><a aria-label="6"></a>state.summaries <span class="ot">&lt;-</span> state.summaries <span class="sc">%&gt;%</span></span>
+<span id="cb4-7"><a aria-label="7"></a>  <span class="fu">mutate</span>(<span class="at">type.clean =</span> <span class="fu">ifelse</span>(type <span class="sc">==</span> <span class="st">"perc_artists"</span>, <span class="st">"Artists"</span>, <span class="st">"All workers"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-8"><a aria-label="8"></a>  <span class="fu">mutate</span>(<span class="at">type.clean =</span> <span class="fu">factor</span>(type.clean, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Artists"</span>, <span class="st">"All workers"</span>)))</span>
+<span id="cb4-9"><a aria-label="9"></a></span>
+<span id="cb4-10"><a aria-label="10"></a>state.summaries <span class="ot">&lt;-</span> <span class="fu">left_join</span>(state.summaries, states)</span>
+<span id="cb4-11"><a aria-label="11"></a></span>
+<span id="cb4-12"><a aria-label="12"></a><span class="co"># grid of states</span></span>
+<span id="cb4-13"><a aria-label="13"></a>my_grid <span class="ot">&lt;-</span> us_state_grid2</span>
+<span id="cb4-14"><a aria-label="14"></a></span>
+<span id="cb4-15"><a aria-label="15"></a><span class="co"># adding puerto rico manually</span></span>
+<span id="cb4-16"><a aria-label="16"></a>my_grid <span class="ot">&lt;-</span> <span class="fu">rbind</span>(my_grid,</span>
+<span id="cb4-17"><a aria-label="17"></a>                 <span class="fu">data.frame</span>(<span class="at">row =</span> <span class="dv">8</span>, <span class="at">col =</span> <span class="dv">12</span>, <span class="at">code =</span> <span class="st">"PR"</span>, <span class="at">name =</span> <span class="st">"Puerto Rico"</span>)</span>
+<span id="cb4-18"><a aria-label="18"></a>                 )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="what-does-the-my_grid-object-look-like" class="slide level2 smaller">
+<h2>What does the <code>my_grid</code> object look like?</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-label="1"></a><span class="fu">head</span>(my_grid)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  row col code       name
+1   6   7   AL    Alabama
+2   1   1   AK     Alaska
+3   6   2   AZ    Arizona
+4   6   5   AR   Arkansas
+5   6   1   CA California
+6   5   3   CO   Colorado</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-label="1"></a><span class="fu">tail</span>(my_grid)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   row col code                 name
+47   3   1   WA           Washington
+48   5   8   WV        West Virginia
+49   3   6   WI            Wisconsin
+50   4   3   WY              Wyoming
+51   4  10   DC District of Columbia
+52   8  12   PR          Puerto Rico</code></pre>
+</div>
+</div>
+</section>
+<section id="lets-look-at-some-code-pt-4" class="slide level2 smaller">
+<h2>Let’s look at some code (pt 4)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-label="1"></a><span class="co"># nice font</span></span>
+<span id="cb9-2"><a aria-label="2"></a><span class="fu">font_add_google</span>(<span class="st">"Kanit"</span>)</span>
+<span id="cb9-3"><a aria-label="3"></a><span class="fu">showtext_auto</span>(<span class="at">enable =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-4"><a aria-label="4"></a></span>
+<span id="cb9-5"><a aria-label="5"></a><span class="fu">ggplot</span>(state.summaries, <span class="fu">aes</span>(<span class="at">x =</span> type.clean, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb9-6"><a aria-label="6"></a>  <span class="fu">geom_flow</span>(<span class="fu">aes</span>(<span class="at">alluvium =</span> POC), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>,</span>
+<span id="cb9-7"><a aria-label="7"></a>            <span class="at">curve_type =</span> <span class="st">"linear"</span>, <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">0.15</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a aria-label="8"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">fill =</span> POC), <span class="at">width =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">size =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a aria-label="9"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#a40062"</span>,<span class="st">"grey"</span>), <span class="at">name =</span> <span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a aria-label="10"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">""</span>, <span class="at">title =</span> <span class="st">"In every US state, &lt;span style = 'color: #a40062;'&gt;people of color&lt;/span&gt; make up a lesser share of artists than all workers"</span>,</span>
+<span id="cb9-11"><a aria-label="11"></a>       <span class="at">caption =</span> <span class="st">"Visualization by @jmliddie | #tidytuesday week 39 | Data from arts.gov by way of Data is Plural"</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a aria-label="12"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb9-13"><a aria-label="13"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_markdown</span>(<span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">t =</span> <span class="dv">10</span>, <span class="at">b =</span> <span class="dv">20</span>), <span class="at">hjust =</span> <span class="dv">0</span>, </span>
+<span id="cb9-14"><a aria-label="14"></a>                                      <span class="at">lineheight =</span> <span class="dv">2</span>, <span class="at">size =</span> <span class="dv">70</span>, <span class="at">family =</span> <span class="st">"Kanit"</span>),</span>
+<span id="cb9-15"><a aria-label="15"></a>        <span class="at">plot.caption =</span> <span class="fu">element_markdown</span>(<span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">margin =</span> <span class="fu">margin</span>(<span class="at">t =</span> <span class="dv">10</span>), <span class="at">color =</span> <span class="st">"grey"</span>,</span>
+<span id="cb9-16"><a aria-label="16"></a>                                        <span class="at">lineheight =</span> <span class="fl">1.4</span>, <span class="at">size =</span> <span class="dv">35</span>, <span class="at">family =</span> <span class="st">"Kanit"</span>),</span>
+<span id="cb9-17"><a aria-label="17"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-18"><a aria-label="18"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-19"><a aria-label="19"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">25</span>, <span class="at">color =</span> <span class="st">"darkgrey"</span>, <span class="at">family =</span> <span class="st">"Kanit"</span>),</span>
+<span id="cb9-20"><a aria-label="20"></a>        <span class="at">strip.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">30</span>, <span class="at">family =</span> <span class="st">"Kanit"</span>),</span>
+<span id="cb9-21"><a aria-label="21"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-22"><a aria-label="22"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-23"><a aria-label="23"></a>        <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb9-24"><a aria-label="24"></a>        <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">35</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">family =</span> <span class="st">"Kanit"</span>),</span>
+<span id="cb9-25"><a aria-label="25"></a>        <span class="at">legend.key.size =</span> <span class="fu">unit</span>(<span class="fl">0.5</span>, <span class="st">'cm'</span>)) <span class="sc">+</span></span>
+<span id="cb9-26"><a aria-label="26"></a>  <span class="fu">facet_geo</span>(<span class="sc">~</span>state, <span class="at">grid =</span> my_grid, <span class="at">label =</span> <span class="st">"name"</span>)</span>
+<span id="cb9-27"><a aria-label="27"></a></span>
+<span id="cb9-28"><a aria-label="28"></a><span class="fu">ggsave</span>(<span class="st">"2022/2022 - Week 23/artists.png"</span>, <span class="at">dpi =</span> <span class="dv">600</span>, <span class="at">width =</span> <span class="fl">8.5</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">bg =</span> <span class="st">"white"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="many-other-regions-are-supported" class="slide level2 smaller">
+<h2>Many other regions are supported!</h2>
+<p><small>There are 216 grids available in the latest version of <code>geofacet</code> and users can submit their own directly using <code>grid_submit()</code>!</small></p>
+
+<img data-src="images/geofacet_eu.png" class="quarto-figure quarto-figure-center r-stretch" width="800"></section>
+<section>
+<section id="lets-work-through-an-example-live" class="title-slide slide level1 smaller-title center">
+<h1>Let’s work through an example live</h1>
+
+<img data-src="images/epa_ucmr5.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="us-epa-drinking-water-monitoring" class="slide level2 smaller">
+<h2>US EPA drinking water monitoring</h2>
+<ul>
+<li class="fragment">The US Environmental Protection Agency (EPA) monitors a list of <em>unregulated</em> contaminants every five years in public water systems as part of the Unregulated Contaminant Monitoring Rule (UCMR). The fifth cycle included 29 different PFAS (per- and polyfluoroalkyl substances or “forever chemicals”) and lithium.</li>
+<li class="fragment"><em>We’ll use the most recent release of these data to visualize trends in PFAS monitoring over time across different states. Download zip file from the <a href="https://pubh6199-data-viz-with-r.github.io/2026-Summer/class/10-recreate-viz/10-recreate-viz.zip">course website</a>. The zip file contains <code>lab5.qmd</code>, which uses a pre-processed dataset, <code>ucmr5_dat.csv</code></em></li>
+</ul>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>PUBH 6199: Visualizing Data with R</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pubh6199-data-viz-with-r\.github\.io\/2026-Summer");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

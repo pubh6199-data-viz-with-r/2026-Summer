@@ -1,0 +1,96 @@
+---
+title: "Final Project Overview"
+toc: true
+toc-location: right
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+For your final project, you will take a dataset, explore it, and tell an insightful story using **at least three different visualizations** (static or interactive). This is an opportunity to showcase your data visualization skills — you'll hopefully want to share this project in your portfolio or during job interviews.
+
+## Format Options
+
+You will choose **one** of the following three formats for your final project:
+
+::: {.callout-note icon=false}
+### Option 1: Same Question, Different Audiences
+
+Create three static visualizations that answer the **same research question**, each designed for a **different audience** (e.g., general public, policy makers, technical experts). Your goal is to demonstrate how design choices change based on who you are communicating with.
+:::
+
+::: {.callout-note icon=false}
+### Option 2: Same Data, Different Questions
+
+Use the **same dataset** to answer **three different but related questions**, each with its own focused visualization. Your goal is to show the range of stories that can be told from a single data source.
+:::
+
+::: {.callout-note icon=false}
+### Option 3: Interactive Dashboard
+
+Build an **interactive dashboard** using `shiny`, `plotly`, or similar tools that includes at least **three visual components** for exploring your data dynamically. Your goal is to give users the ability to explore the data themselves.
+:::
+
+## Teams
+
+You will work in **teams of 2**. Please start thinking about what topics you are interested in pursuing for the final project and come to class ready to pitch your idea in **lab 4**. Teams are formed based on shared interests and can be adjusted during **lab 4**.
+
+All team members are expected to:
+
+- Contribute to at least one visualization
+- Present during the final class session on **June 25**
+- Complete the peer evaluation
+
+## Deliverables & Milestones
+
+The final project is broken into milestones to make the work more manageable:
+
+```{r}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+tibble(
+  Milestone = c(
+    "Brainstorm project ideas",
+    "Lab 4: Project Plan",
+    "Final Report",
+    "Presentation",
+    "Peer evaluation"
+  ),
+  Description = c(
+    "Individually brainstorm your project idea, format preference, research questions, and data sources",
+    "Form your team, establish team policies, develop a project plan, and sketch your visualizations",
+    "Submit your final analysis as a rendered Quarto document with at least three visualizations",
+    "Present your project to the class",
+    "Complete a peer evaluation"
+  ),
+  `Due Date` = c("Jun 11", "Jun 15", "Jun 25", "Jun 25", "Jun 25"),
+  Weight = c("Part of participation", "3.75%", "20%", "13%", "7%")
+) |>
+  kable(format = "html", escape = FALSE) |>
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+> The final project (report + presentation + peer evaluation) is worth **40%** of your final grade.
+
+## Final Project Template
+
+Your final report should be written using the [project template](../hw/5-final.html). The template includes the required sections and formatting guidelines.
+
+You will submit your project as:
+
+1. A rendered **HTML file** hosted on GitHub Pages
+2. A **GitHub repository** containing your `.qmd` source file and data
+
+## Tips for Success
+
+- **Start early**: begin collecting and cleaning your data in Week 4 so you have time to iterate on your visualizations.
+- **Sketch first**: use pencil and paper to plan your charts before writing code. Lab 4 will walk you through this.
+- **Tell a story**: your visualizations should connect to each other and lead the reader to a clear insight.
+- **Apply course principles**: every design choice should be motivated by the visualization principles you've learned.
+
+## Examples
+
+Looking for inspiration? Check out the [Project Showcase](https://pubh6199-data-viz-with-r.github.io/showcase.html) to see examples from past students.
