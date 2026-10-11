@@ -1,0 +1,34 @@
+---
+title: "Lecture 5. EWG x GWSPH: Data Visualization"
+subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+date: June 16, 2026
+author: Sydney Evans, M.P.H., Varun Subramaniam, M.S.
+format: 
+  revealjs:
+    pdf: true
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    css: style.css
+    footer: 'PUBH 6199: Visualizing Data with R'
+---
+
+## Class today {.smaller}
+
+**Reading assignment**:
+
+- [PFAS Treatment as an Opportunity for Broader Drinking Water Improvements: Evidence from U.S. Water Systems.](https://pubs.acs.org/doi/10.1021/acsestwater.5c00519)
+
+
+**About your instructors**:
+
+Sydney Evans, MPH. Senior Science Analyst
+
+Varun Subramaniam, MS. Science Analyst
+
+Data Science Research, Environmental Working Group
+
+**Slides**:
+
+Please use the ["Download PDF"](https://pubh6199-data-viz-with-r.github.io/2026-Summer/class/9-case-study/9-case-study.pdf) button to download the slides.

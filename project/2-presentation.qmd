@@ -1,0 +1,74 @@
+---
+title: "Presentation"
+toc: true
+toc-location: right
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+source(here::here("_common.R"))
+
+rubric <- read_csv(here::here('rubrics', '4-final-presentation.csv'))
+maxPoints <- rubric |>
+  filter(rating == "Excellent") |>
+  summarise(max = sum(maxPoints)) |>
+  pull(max)
+```
+
+> **When**: June 25, during class
+>
+> **Weight**: The presentation is part of the 40% final project grade.
+>
+> **Purpose**: Communicate your data visualization project to your peers and practice giving and receiving constructive feedback.
+>
+> **Assessment**: Your presentation will be assessed using the [rubric](#grading-rubric) at the bottom of this page.
+
+## Instructions
+
+Each team will present their final project to the class on **June 25**. All team members must participate in the presentation.
+
+### Length
+
+- **10-12 minutes** of presentation per team
+- **3-5 minutes** of Q&A and peer feedback after each presentation
+
+### What to Cover
+
+Your presentation should tell the story of your project from start to finish:
+
+1. **Introduce your topic and research question** — why does it matter? who is the audience?
+2. **Describe your data** — where did it come from, what does it contain?
+3. **Walk through your visualizations** — present each chart, explain your design choices, and what it reveals
+4. **Summarize your findings** — what are the key takeaways?
+5. **Reflect on limitations** — what would you do differently?
+
+### Slide Design
+
+- Use **slides** (PowerPoint, Google Slides, Quarto Revealjs, or similar)
+- Aim for **one key idea per slide**
+- Let your **visualizations do the talking** — avoid bullet-point heavy slides
+- Ensure text is large enough to read from the back of the room
+- All team members should speak
+
+### Peer Feedback
+
+After each presentation, the class will provide structured feedback. Come prepared to give constructive, specific feedback on:
+
+- Clarity of the research question
+- Effectiveness of the visualizations
+- Quality of the storytelling
+- Design choices
+
+Peer feedback and your reflections on it will be part of your final project grade, (25 out of 140 points), so take it seriously!
+
+## Grading Rubric {#grading-rubric}
+
+Your presentation is worth **`r maxPoints` points**, assessed on the following criteria:
+
+```{r}
+make_rubric(rubric)
+```
