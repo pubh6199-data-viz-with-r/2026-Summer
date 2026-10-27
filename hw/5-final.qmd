@@ -4,7 +4,7 @@ author: "[YOUR NAMES]"
 date: "2026-XX-XX"
 params:
   number: 5
-  purpose: "Final project for PUBH 6199: Visualizing Data with R"
+  purpose: "Final project for PUBH 6199/6148: Visualizing Data with R"
 format: 
   html:
     toc: true

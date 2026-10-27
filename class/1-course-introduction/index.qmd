@@ -1,6 +1,6 @@
 ---
 title: "1. Course Introduction"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+subtitle: "PUBH 6199/6148: Visualizing Data with R, Summer 2026"
 date: May 19, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
@@ -12,7 +12,7 @@ format:
     preview-links: auto
     logo: images/logo.png
     css: style.css
-    footer: 'PUBH 6199: Visualizing Data with R'
+    footer: 'PUBH 6199/6148: Visualizing Data with R'
 resources:
   - demo.pdf
   - images/
@@ -68,7 +68,7 @@ GW SEAS
 - Why?
 - Introduction to {ggplot2}
 
-## PUBH 6199 Goals
+## PUBH 6199/6148 Goals
 
 :::::: columns
 ::: {.column width="33%"}
@@ -169,7 +169,7 @@ A randomized controlled trial.
 
 ## Communication {.fit-text .smaller}
 
--   Slack: PUBH 6199 channel
+-   Slack: PUBH 6199/6148 channel
 -   Course website: [https://pubh6199-data-viz-with-r.github.io/2026-Summer/](https://pubh6199-data-viz-with-r.github.io/2026-Summer/)
 -   Blackboard
 -   Office hours:

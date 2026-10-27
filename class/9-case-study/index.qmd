@@ -1,6 +1,6 @@
 ---
 title: "Lecture 5. EWG x GWSPH: Data Visualization"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+subtitle: "PUBH 6199/6148: Visualizing Data with R, Summer 2026"
 date: June 16, 2026
 author: Sydney Evans, M.P.H., Varun Subramaniam, M.S.
 format: 
@@ -11,7 +11,7 @@ format:
       buttons: false
     preview-links: auto
     css: style.css
-    footer: 'PUBH 6199: Visualizing Data with R'
+    footer: 'PUBH 6199/6148: Visualizing Data with R'
 ---
 
 ## Class today {.smaller}

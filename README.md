@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-## PUBH 6199: Visualizing Data with R (Summer 2025) <a href='https://pubh6199-data-viz-with-r.github.io/2025-Summer'><img src='images/logo.png' align="right" height="139"/></a>
+## PUBH 6199/6148: Visualizing Data with R (Summer 2025) <a href='https://pubh6199-data-viz-with-r.github.io/2025-Summer'><img src='images/logo.png' align="right" height="139"/></a>
 
 <!-- badges: start -->
 

@@ -41,7 +41,7 @@ knitr::opts_chunk$set(
 
 ## Overview of HW3
 
-This assignment is your first step toward building your final project for PUBH 6199: Visualizing Data with R. In the final project, you'll take a dataset, explore it, and tell a compelling and insightful story using **at least three different visualizations** (static or interactive). 
+This assignment is your first step toward building your final project for PUBH 6199/6148: Visualizing Data with R. In the final project, you'll take a dataset, explore it, and tell a compelling and insightful story using **at least three different visualizations** (static or interactive). 
 
 
 **Skills practiced**:

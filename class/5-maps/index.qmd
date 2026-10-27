@@ -1,6 +1,6 @@
 ---
 title: "Lecture 3. Maps"
-subtitle: "PUBH 6199: Visualizing Data with R, Summer 2026"
+subtitle: "PUBH 6199/6148: Visualizing Data with R, Summer 2026"
 date: June 2, 2026
 author: Xindi (Cindy) Hu, ScD
 format: 
@@ -12,7 +12,7 @@ format:
     preview-links: auto
     logo: images/logo.png
     css: style.css
-    footer: 'PUBH 6199: Visualizing Data with R'
+    footer: 'PUBH 6199/6148: Visualizing Data with R'
 resources:
   - images/
 ---

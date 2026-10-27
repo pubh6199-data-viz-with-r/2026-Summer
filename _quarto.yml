@@ -19,13 +19,13 @@ project:
     - "templates/"
 
 website:
-  title: "PUBH 6199: Visualizing Data with R"
+  title: "PUBH 6199/6148: Visualizing Data with R"
   image: images/logo.png
   site-url: https://pubh6199-data-viz-with-r.github.io/2026-Summer
   favicon: images/favicon.ico
   repo-url: https://github.com/pubh6199-data-viz-with-r/2026-Summer
   repo-actions: [edit, issue]
-  description: 'Course website for PUBH 6199: Visualizing Data with R at George Washington University, offered in Summer 2026.'
+  description: 'Course website for PUBH 6199/6148: Visualizing Data with R at George Washington University, offered in Summer 2026.'
   search: true
   open-graph:
     locale: es_ES
